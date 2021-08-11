@@ -1,5 +1,11 @@
 # Using a build tool
 
+## Objectives
+
+ * Understand why a build tool is useful.
+ * Use esbuild to bundle different JS files together.
+ * Use esbuild and NPM scripts to run a build process for JS webapp.
+
 Real JavaScript programs are usually composed of many different files, much like programs in other languages. As seen previously, we can use the `<script>` tag to load JS files in the browser and run them. However, as we add more Javascript files (functions, classes, etc) in our application, the number of files to load is becoming harder to manage. Also, some JS files will need to be loaded *after* others they might depend on, which could lead to situation like this:
 
 ```html

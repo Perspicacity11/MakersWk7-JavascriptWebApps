@@ -1,5 +1,10 @@
 # JavaScript and the browser
 
+## Objectives
+
+ * Load a JavaScript file in the browser.
+ * Use the browser JS console.
+
 ## Exercise - loading on a web page
 
 The simplest way to see JavaScript in action in a web browser is to load a JS file using a `<script>` HTML tag. Consider the following JavaScript code:

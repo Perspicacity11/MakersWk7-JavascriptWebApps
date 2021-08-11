@@ -1,8 +1,8 @@
-# A Tale of Two Web Apps
+# Intermezzo — A Tale of Two Web Apps
 
 It's time for us to speak about the *two types* of web applications that can exist — as usual, the reality is more complex than this, but for the sake of simplicity, this will do.
 
-Previously, you've worked with what we could call "classic" web applications, where the request/response cycle between the client (browser) and the server looks like this:
+In the previous weeks, you've worked with what we could call "classic" web applications, where the request/response cycle between the client (browser) and the server looks like this:
 1. The browser requests a page (`/posts`) — HTTP request is sent
 2. The server receives the HTTP request and processes it (maybe it talks to a database as well, and does some work).
 3. The server sends the HTTP response containing the HTML webpage.
@@ -11,7 +11,7 @@ Previously, you've worked with what we could call "classic" web applications, wh
 
 However, thanks to the development of JavaScript and its capabilities in the browser, for some years now a new type of web application has gained traction, and is now considered the "modern" way of building a web app — they're called *single-page applications*.
 
-You probably remember that JavaScript is able to do those things within the browser:
+You now know that JavaScript is able to do those things within the browser:
  * make HTTP requests to remote URLs.
  * respond to user interaction (a click on a button, for example).
  * change the page, by updating the DOM.
@@ -19,6 +19,8 @@ You probably remember that JavaScript is able to do those things within the brow
 In single-page applications (or SPAs), the full HTML page is usually loaded only *at the start* of the user experience on the website. When they click on a link or a button, perhaps to navigate to a new page, the JavaScript code handles this interaction.
 
 But, instead of letting the browser reload the whole page, JavaScript will update the DOM to reflect the change in the user interface. If it needs to fetch or update data on the server, the JavaScript code will also make an HTTP request. But the whole HTML page is never fully reloaded. Rather, JavaScript "takes over" the browser's default behaviour and fetches/updates only the data it needs, and updates only the parts of the DOM it needs as well.
+
+Steps 1-4 are the same than for a classic application — but from there, the behaviour is different:
 
 1. The browser requests a page (`/`) — HTTP request is sent
 2. The server receives the HTTP request and processes it
