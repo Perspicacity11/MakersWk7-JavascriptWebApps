@@ -27,4 +27,8 @@ The second Javascript module (week 2) will cover:
 
 ## Notes
 
+```
+esbuild --bundle index.js --outfile=bundle.js --watch
+```
+
 - If JS used both for frontend and backend, make sure they understand the split between the two
