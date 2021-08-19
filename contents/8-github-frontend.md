@@ -1,4 +1,4 @@
-# A custom Github frontend
+# A custom Github frontend (optional)
 
 In this exercise, we'll use the Github API to build our own "frontend" user interface to display information on Github repositories and users. 
 
