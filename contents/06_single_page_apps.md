@@ -35,3 +35,14 @@ This allow for a faster and more efficient user experience, because our web appl
 How does JavaScript communicate with our server (the backend)? Remember than in the previous JavaScript module, we said APIs are the way programs can interact with other programs, and exchange data. JavaScript fetches or updates data on our backend server by the same mechanism that we have to load HTML pages — except that JavaScript usually only needs raw data, usually in JSON format. Using something like `fetch`, for example, can achieve this.
 
 Remember we spoke earlier about the distinction between frontend and backend. In "classic" web applications, the frontend code (executed by the browser) has *very little control* on the program and its logic — maybe it's only HTML, CSS, and bits of JavaScript to do a few things. *In SPAs, the frontend code has usually way more control* (there will usually be a lot more JavaScript!), because it decides which data to fetch or update on the server, and which updates should happen on the page.
+
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_single_page_apps.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_single_page_apps.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_single_page_apps.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_single_page_apps.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_single_page_apps.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->

@@ -54,7 +54,7 @@ The value in `element` now gives us a "handle" on the "real" HTML element that i
 
 To complete the following questions, you'll need to:
  * use the functions [`document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and `document.querySelectorAll` within the browser JS console.
- * use the innerText property of DOM elements.
+ * use the `innerText` property of DOM elements.
  * use the functions `document.createElement` and `document.body.appendChild`
  * use the properties `.className` and `.id`
  * use only JavaScript code (you can't modify HTML elements using the browser's "Elements" tab)
@@ -173,3 +173,14 @@ test('displays a user after a click', () => {
 ```
 
 </details>
+
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/03_interacting_with_the_page.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/03_interacting_with_the_page.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/03_interacting_with_the_page.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/03_interacting_with_the_page.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/03_interacting_with_the_page.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->

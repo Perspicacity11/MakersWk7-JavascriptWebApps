@@ -15,7 +15,7 @@ The requirements are:
 3. Once received, the data should be processed and the following elements should appear on the page:
     * The repository name
     * The repository profile picture
-    * A link to the *actual* github page
+    * A link to the *actual* Github page
     * The number of "stargazers"
     * The number of forks
     * The programming language of the repo
@@ -26,7 +26,7 @@ The requirements are:
 
 ## Exercise - showing user info
 
-This one is left to you! You should build a similar page, but this time to display some information about a user rathen than a repository. Ever wanted to customise the appearance of your profile on Github? This is the chance to build a complete personalised page for your github info!
+This one is left to you! You should build a similar page, but this time to display some information about a user rather than a repository. Ever wanted to customise the appearance of your profile on Github? This is the chance to build a complete personalised page for your Github info!
 
 The API URL to request your (public) profile info is:
 ```
@@ -38,3 +38,13 @@ You're free to design the page how you want it, make sure that it includes at le
  * your bio
  * your profile picture
  * the number of repos and followers
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/xxx_github_frontend.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/xxx_github_frontend.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/xxx_github_frontend.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/xxx_github_frontend.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/xxx_github_frontend.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->

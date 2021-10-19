@@ -103,7 +103,7 @@ $ esbuild add.js --bundle  --outfile=bundle.js --watch
 
 ## Using NPM scripts to run the build
 
-Memorizing how to run the `esbuild` command can be hard, so we can use NPM scripts to save some time. If your project directory doesn't contain a file `package.json` yet, remember you can generate one by running `npm init`.
+Memorising how to run the `esbuild` command can be hard, so we can use NPM scripts to save some time. If your project directory doesn't contain a file `package.json` yet, remember you can generate one by running `npm init`.
 
 ```json
 {
@@ -132,3 +132,13 @@ $ npm run build
 We'll also assume that:
  * our entrypoint file will *always* be named `index.js`, and this file will require all other files needed for our program to function. 
  * our bundle file will *always* be named `bundle.js`, and this will be the only file loaded by the HTML page.
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/02_build_tool.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/02_build_tool.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/02_build_tool.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/02_build_tool.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/02_build_tool.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->

@@ -4,7 +4,7 @@
 
  * Build a simple single-page application that interacts with a backend server and update its user interface.
 
-Remember our Thermostat from the previous module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the exampler implementation.
+Remember our Thermostat from the previous module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the exemplar implementation.
 
 ```bash
 $ cd thermostat-server
@@ -20,17 +20,17 @@ curl -XGET http://localhost:3000/temperature
 
 ## Exercise - initial temperature
 
-Create a new project directory `thermostat-client` and initialize it with a `package.json`, as usual.
+Create a new project directory `thermostat-client` and initialise it with a `package.json`, as usual.
 
 1. Create a page that contains only a single HTML `<p>` element — empty for now.
 2. Write JavaScript code in the `index.js` file to request the URL `http://localhost:3000/temperature` and extract the temperature value from the received response.
-3. Update thet contents of the `<p>` element with the temperature received from the server.
+3. Update the contents of the `<p>` element with the temperature received from the server.
 
 If your code is working, you should be able to open the page and — after a brief moment — see the temperature appear on the page. After using `curl` to update the temperature on the server, you should also be able to reload the page and see the new value displayed.
 
 You should also see the request to `http://localhost:3000/temperature` logged in the console "Network" tab.
 
-## Exercise - tyding up
+## Exercise - tidying up
 
 So far our JavaScript code is doing two things:
  * fetch some initial data (the temperature) from a server.
@@ -99,3 +99,14 @@ increaseTemperature()
   });
 ```
 
+
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/07_thermostat_frontend.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/07_thermostat_frontend.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/07_thermostat_frontend.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/07_thermostat_frontend.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/07_thermostat_frontend.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->
