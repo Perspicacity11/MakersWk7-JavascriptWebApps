@@ -1,5 +1,7 @@
 # Intermezzo — A Tale of Two Web Apps
 
+*You might want to take some time to read the following paragraphs, before moving to the exercise and discussion below.*
+
 It's time for us to speak about the *two types* of web applications that can exist — as usual, the reality is more complex than this, but for the sake of simplicity, this will do.
 
 In the previous weeks, you've worked with what we could call "classic" web applications, where the request/response cycle between the client (browser) and the server looks like this:
@@ -36,6 +38,15 @@ How does JavaScript communicate with our server (the backend)? Remember than in 
 
 Remember we spoke earlier about the distinction between frontend and backend. In "classic" web applications, the frontend code (executed by the browser) has *very little control* on the program and its logic — maybe it's only HTML, CSS, and bits of JavaScript to do a few things. *In SPAs, the frontend code has usually way more control* (there will usually be a lot more JavaScript!), because it decides which data to fetch or update on the server, and which updates should happen on the page.
 
+### Exercise - discussion
+
+Discuss with your pair (or with yourself!) the following questions. If you disagree on the response, try to understand why and discuss further — ask someone else in your cohort or your coach if needed.
+
+ * A piece of JavaScript code is changing an HTML button label from "Submit" to "Submitted" — is it frontend, or backend?
+ * A piece of JavaScript code is declaring an HTTP POST endpoint that will accept an HTTP request containing params to insert into a database — is it frontend, or backend?
+ * A user clicks on a link on an e-commerce website. The browser reloads the entire page, fetching a whole new HTML page and new resources. Can we say this e-commerce website a "single page application"?
+ * A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website a "single page application"?
+ * In case of single page applications — what is the only way a frontend web application and its backend can communicate?
 
 [Next Challenge](07_thermostat_frontend.md)
 
