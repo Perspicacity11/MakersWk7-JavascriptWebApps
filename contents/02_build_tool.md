@@ -133,6 +133,8 @@ We'll also assume that:
  * our entrypoint file will *always* be named `index.js`, and this file will require all other files needed for our program to function. 
  * our bundle file will *always* be named `bundle.js`, and this will be the only file loaded by the HTML page.
 
+[Next Challenge](03_interacting_with_the_page.md)
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
@@ -142,6 +144,3 @@ We'll also assume that:
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
-
-
-[Next Challenge](03_interacting_with_the_page.md)

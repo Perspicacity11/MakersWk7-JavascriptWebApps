@@ -73,6 +73,8 @@ curl -s -XGET http://localhost:3000/notes | jq
 ]
 ```
 
+[Next Challenge](09_notes_app_frontend.md)
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
@@ -82,6 +84,3 @@ curl -s -XGET http://localhost:3000/notes | jq
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
-
-
-[Next Challenge](09_notes_app_frontend.md)

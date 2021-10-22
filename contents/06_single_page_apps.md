@@ -37,6 +37,8 @@ How does JavaScript communicate with our server (the backend)? Remember than in 
 Remember we spoke earlier about the distinction between frontend and backend. In "classic" web applications, the frontend code (executed by the browser) has *very little control* on the program and its logic — maybe it's only HTML, CSS, and bits of JavaScript to do a few things. *In SPAs, the frontend code has usually way more control* (there will usually be a lot more JavaScript!), because it decides which data to fetch or update on the server, and which updates should happen on the page.
 
 
+[Next Challenge](07_thermostat_frontend.md)
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
@@ -46,6 +48,3 @@ Remember we spoke earlier about the distinction between frontend and backend. In
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
-
-
-[Next Challenge](07_thermostat_frontend.md)

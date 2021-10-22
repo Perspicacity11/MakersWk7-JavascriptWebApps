@@ -175,6 +175,8 @@ test('displays a user after a click', () => {
 </details>
 
 
+[Next Challenge](04_user_interaction.md)
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
@@ -184,6 +186,3 @@ test('displays a user after a click', () => {
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
-
-
-[Next Challenge](04_user_interaction.md)

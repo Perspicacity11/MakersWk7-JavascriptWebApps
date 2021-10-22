@@ -78,6 +78,8 @@ It's also worth noting that the backend and frontend **can only communicate usin
 
 This week, most of the code we'll write will run in the browser, so it could be considered as *frontend* code, and will communicate with a *backend* at some point. But remember to keep those things in the back of your head, and to always have in mind *where* should go the code you have to write.
 
+[Next Challenge](02_build_tool.md)
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
@@ -87,6 +89,3 @@ This week, most of the code we'll write will run in the browser, so it could be 
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
-
-
-[Next Challenge](02_build_tool.md)
