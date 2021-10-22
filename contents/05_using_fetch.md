@@ -67,15 +67,6 @@ To complete this exercise, you'll need to:
 
 4. When the user types in a new repo name and submits it, the different sections should be updated with the new repo content.
 
-## Exercise - debugging
-
-Someone from your cohort decided to adapt the previous exercise, but this time to load a Github user profile rather than a repository. The Github API endpoint to load information about a user is https://api.github.com/users/{your username}. 
-
-```js
-
-```
-
-
 
 [Next Challenge](06_single_page_apps.md)
 

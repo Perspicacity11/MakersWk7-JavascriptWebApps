@@ -32,8 +32,6 @@ newElement.style.color = 'green';
 
 However, the element is not displayed and the page stays blank. Can you see why?
 
-## Exercise - deleting posts
-
 
 
 [Next Challenge](05_using_fetch.md)
