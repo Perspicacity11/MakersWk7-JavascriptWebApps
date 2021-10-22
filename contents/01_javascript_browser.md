@@ -87,3 +87,6 @@ This week, most of the code we'll write will run in the browser, so it could be 
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](02_build_tool.md)

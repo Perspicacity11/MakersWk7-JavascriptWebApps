@@ -110,3 +110,6 @@ increaseTemperature()
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](08_notes_app_backend.md)

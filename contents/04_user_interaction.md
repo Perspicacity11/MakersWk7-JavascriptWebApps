@@ -45,3 +45,6 @@ However, the element is not displayed and the page stays blank. Can you see why?
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](05_using_fetch.md)

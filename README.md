@@ -23,6 +23,12 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 8. [Building a notes app - backend](./contents/08_notes_app_backend.md).
 9. [Building a notes app - frontend](./contents/09_notes_app_frontend.md).
 
+## Resources
+
+* [JS Promises](https://github.com/makersacademy/course/blob/main/pills/js_promises.md)
+* [Manipulating the DOM with JS](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+* [Using fetch to make HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

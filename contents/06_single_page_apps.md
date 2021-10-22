@@ -46,3 +46,6 @@ Remember we spoke earlier about the distinction between frontend and backend. In
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](07_thermostat_frontend.md)

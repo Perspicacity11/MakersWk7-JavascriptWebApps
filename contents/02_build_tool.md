@@ -142,3 +142,6 @@ We'll also assume that:
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](03_interacting_with_the_page.md)

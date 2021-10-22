@@ -86,3 +86,6 @@ Someone from your cohort decided to adapt the previous exercise, but this time t
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+
+
+[Next Challenge](06_single_page_apps.md)
