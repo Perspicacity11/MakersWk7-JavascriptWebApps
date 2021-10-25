@@ -37,7 +37,7 @@ console.log(`The result is ${result}`);
 
 1. Copy this code into a file `main.js`. 
 2. In the same directory than this file, create an HTML file `index.html`, containing a basic HTML 5 skeleton. Open this page with your web browser.
-3. Research how to load the file `main.js` inside the webpage. Check that the message is printed to the console.
+3. Research [how to load the file `main.js`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#examples) inside the webpage. Once you've updated the code, reload the page and check that the message is printed to the console.
 
 ## The Developer Console
 

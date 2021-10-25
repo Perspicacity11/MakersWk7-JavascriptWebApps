@@ -10,7 +10,7 @@ When the browser reads the HTML, it then displays a page that corresponds to the
 
 However an HTML webpage is, on its own, not doing much. We can define forms, and links to navigate to other pages, but this will merely reload the entire browser window on the new page. Most of the logic is happening on the server side, and the browser is only "passively" rendering whichever content the server is sending back.
 
-JavaScript is used to bring interactivity to those webpages. Using JavaScript, we'll be able to modify a page dynamically, add and modify elements, and handle user interaction without having to rely on the server at all.
+JavaScript is used to bring interactivity to those webpages. Using JavaScript, we'll be able to modify a page dynamically, add and modify elements, and handle user interaction without having to rely on the server at all. The DOM (for Document Object Model) is the representation of the HTML page as a "tree" of elements.
 
 ## Exercise - using the DOM
 
@@ -115,7 +115,7 @@ Let's create a file `addNewPost.test.js` in a `tests` directory in order to test
 // tests/addNewPost.test.js
 const addNewPost = require('../addNewPost');
 
-test('displays a user after a click', () => {
+test('displays a post', () => {
   addNewPost();
 
   expect(document.querySelectorAll('.post').length).toBe(4);

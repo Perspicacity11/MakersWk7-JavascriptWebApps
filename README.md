@@ -32,6 +32,7 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 * [JS Promises](https://github.com/makersacademy/course/blob/main/pills/js_promises.md)
 * [Manipulating the DOM with JS](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 * [Using fetch to make HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+* [Stretch - building a custom GitHub page]()
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

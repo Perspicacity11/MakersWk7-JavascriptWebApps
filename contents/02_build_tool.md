@@ -50,6 +50,10 @@ $ esbuild index.js --bundle --outfile=bundle.js --watch
  * `bundle.js` is the name of the bundled file that will be loaded by the browser.
  * the `--watch` option tells esbuild to automatically regenerate the bundle when changes to source files are made.
 
+Here's a diagram of how a build tool such as esbuild is compiling source files into a bundled file loaded by the browser:
+
+![Build tool schema](resources/build-tool.svg)
+
 ## Exercise - Hello, bundle
 
 In a new directory `hello_bundle`, create the following file `index.html`:
