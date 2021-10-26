@@ -1,6 +1,6 @@
 # Thermostat server
 
-This project is intended as a small exemplar to be used for the JavaScript Thermostat web server.
+This project is intended as a small exemplar to be used for the JavaScript Thermostat web server. You can [download it as a zip here](./thermostat-backend.zip).
 
 Run the server:
 ```
@@ -13,16 +13,16 @@ Thermostat server listening on http://localhost:3000
 Usage over HTTP:
 
 ```
-$ curl -XGET http://localhost:3000/temperature 
+$ curl -XGET http://localhost:3000/
 {"temperature":20}
 
 $ curl -XPOST http://localhost:3000/up 
 $ curl -XPOST http://localhost:3000/up 
-$ curl -XGET http://localhost:3000/temperature 
+$ curl -XGET http://localhost:3000/
 {"temperature":22}
 
-$ curl -XDELETE http://localhost:3000/temperature
-$ curl -XGET http://localhost:3000/temperature 
+$ curl -XDELETE http://localhost:3000/
+$ curl -XGET http://localhost:3000/ 
 {"temperature":20}
 ```
 

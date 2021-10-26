@@ -1,6 +1,8 @@
 class Thermostat {
   constructor(weatherApi) {
-    this.temperature = 20;
+    this.DEFAULT_TEMPERATURE = 20;
+
+    this.temperature = this.DEFAULT_TEMPERATURE;
     this.weatherApi = weatherApi;
   }
 
@@ -10,6 +12,10 @@ class Thermostat {
 
   down() {
     this.temperature--;
+  }
+
+  reset() {
+    this.temperature = this.DEFAULT_TEMPERATURE;
   }
 
   getTemperature() {

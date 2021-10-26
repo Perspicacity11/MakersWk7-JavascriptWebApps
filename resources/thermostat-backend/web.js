@@ -19,6 +19,11 @@ app.post('/down', (req, res) => {
   res.send();
 });
 
+app.delete('/', (req, res) => {
+  thermostat.reset();
+  res.send();
+});
+
 app.listen(port, () => {
   console.log(`Thermostat server listening on http://localhost:${port}`)
 });
