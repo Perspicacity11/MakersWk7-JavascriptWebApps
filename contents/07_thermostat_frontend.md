@@ -7,14 +7,15 @@
 Remember our Thermostat from the previous module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the [exemplar implementation](../resources/thermostat-backend).
 
 ```bash
-$ cd thermostat-server
+$ cd thermostat-backend
+$ npm install
 $ node web.js
 ```
 
 You can use `curl` to check that the express server is working and responding to requests:
 
 ```bash
-curl -XGET http://localhost:3000/temperature
+curl -XGET http://localhost:3000/
 { "temperature": 20 }
 ```
 
@@ -28,7 +29,7 @@ Create a new project directory `thermostat-client` and initialise it with a `pac
 
 If your code is working, you should be able to open the page and — after a brief moment — see the temperature appear on the page. After using `curl` to update the temperature on the server, you should also be able to reload the page and see the new value displayed.
 
-You should also see the request to `http://localhost:3000/temperature` logged in the console "Network" tab.
+You should also see the request to `http://localhost:3000/` logged in the console "Network" tab.
 
 ## Exercise - tidying up
 
@@ -64,12 +65,14 @@ increaseTemperature(() => {
 3. After the response is received, you should fetch once again the temperature from the server to update the page with the new temperature. You should use the `fetchTemperature` function.
 4. Remember you shouldn't update the DOM directly, but call `renderTemperature` to update the page.
 
-You should see two new requests logged in the console "Network" tab after clicking the button — one for `http://localhost:3000/up`, then another for `http://localhost:3000/temperature`.
+You should see two new requests logged in the console "Network" tab after clicking the button — one for `POST http://localhost:3000/up`, then another for `GET http://localhost:3000/`.
 
 5. Repeat all those steps to implement a "Down" button to decrease the temperature.
 6. Do the same to implement a button "Reset" that resets the temperature.
 
-## Exercise - callback hell
+## Bonus exercise - solving callback hell
+
+*This exercise is intended to make you explore promises. If that is something you're not yet familiar with, you may want to skip to the next section now, and work on this exercise at a later point.*
 
 After writing the code for the previous exercises, your file `index.js` might look like this:
 
@@ -99,6 +102,7 @@ increaseTemperature()
   });
 ```
 
+Modify your code to use promises rather than callbacks, so the above works.
 
 
 [Next Challenge](08_notes_app_backend.md)
