@@ -4,7 +4,7 @@
 
  * Build a simple single-page application that interacts with a backend server and update its user interface.
 
-Remember our Thermostat from the previous module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the exemplar implementation.
+Remember our Thermostat from the previous module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the [exemplar implementation](../resources/thermostat-backend).
 
 ```bash
 $ cd thermostat-server

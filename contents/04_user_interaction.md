@@ -97,12 +97,14 @@ If you've completed all the above correctly, you should be able to:
 Someone from your cohort wrote the following code to add a new DOM element on their webpage: 
 
 ```javascript
-let newElement = document.createElement('div')
-newElement.innerText = 'Welcome to my website';
-newElement.style.color = 'green';
+const addNewElement = () => {
+  let newElement = document.createElement('div')
+  newElement.innerText = 'Welcome to my website';
+  newElement.style.color = 'green';
+}
 ```
 
-However, the element is not displayed and the page stays blank. Can you see why?
+However, the element is not displayed when they call `addNewElement();` and the page stays blank. Can you see why?
 
 
 
