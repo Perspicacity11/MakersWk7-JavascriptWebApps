@@ -48,7 +48,7 @@ Discuss with your pair (or with yourself!) the following questions. If you disag
  * A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website a "single page application"?
  * In case of single page applications — what is the only way a frontend web application and its backend can communicate?
 
-[Next Challenge](07_thermostat_frontend.md)
+[Next Challenge](07_notes_app_backend.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

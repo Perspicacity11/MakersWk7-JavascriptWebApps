@@ -19,9 +19,8 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 4. [Interacting with the page - Events](./contents/04_user_interaction.md).
 5. [Using fetch to call APIs](./contents/05_using_fetch.md).
 6. [Single web applications](./contents/06_single_page_apps.md).
-7. [Thermostat frontend](./contents/07_thermostat_frontend.md).
-8. [Building a notes app - backend](./contents/08_notes_app_backend.md).
-9. [Building a notes app - frontend](./contents/09_notes_app_frontend.md).
+7. [Building a notes app - backend](./contents/08_notes_app_backend.md).
+8. [Building a notes app - frontend](./contents/09_notes_app_frontend.md).
 
 ## Workshops
 
@@ -29,10 +28,11 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 
 ## Resources and practicals
 
+* [Exercise: Building a custom GitHub page](./practicals/github-frontend)
+* [Exercise: Building a frontend for the thermostat server](./practicals/thermostat-frontend)
 * [JS Promises](https://github.com/makersacademy/course/blob/main/pills/js_promises.md)
 * [Manipulating the DOM with JS](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 * [Using fetch to make HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-* [Stretch - building a custom GitHub page]()
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

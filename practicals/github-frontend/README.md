@@ -1,4 +1,8 @@
-# A custom Github repo page 
+# Exercise - a custom Github repo page 
+
+## Objectives
+
+ * Build a web page that requests data from an API and update its contents.
 
 In this exercise, we'll use the Github API to build our own "frontend" user interface to display information on Github repositories and users. 
 
