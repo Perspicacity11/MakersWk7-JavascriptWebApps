@@ -22,17 +22,27 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 7. [Building a notes app - backend](./contents/08_notes_app_backend.md).
 8. [Building a notes app - frontend](./contents/09_notes_app_frontend.md).
 
+## End of unit challenge
+
+* [Chitter frontend challenge](https://github.com/makersacademy/frontend-api-challenge)
+* [News summary challenge](https://github.com/makersacademy/news-summary-challenge)
+
 ## Workshops
 
  * [Promises](./workshops/promises)
 
 ## Resources and practicals
 
+* [Reading beyond your level](https://hackmd.io/F-pmnp3hRhePddmf3mnKGw)
+* [Playing with the DOM to update a page](./practicals/playing-with-dom)
 * [Exercise: Building a custom GitHub page](./practicals/github-frontend)
 * [Exercise: Building a frontend for the thermostat server](./practicals/thermostat-frontend)
+* [Calling APIs in JavaScript (frontend)](https://github.com/makersacademy/course/blob/main/pills/calling_apis_in_javascript.md)
+* [Using the Postman tool to call HTTP APIs](https://www.postman.com/downloads/)
 * [JS Promises](https://github.com/makersacademy/course/blob/main/pills/js_promises.md)
 * [Manipulating the DOM with JS](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 * [Using fetch to make HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+* [Going further - Introduction to React tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
