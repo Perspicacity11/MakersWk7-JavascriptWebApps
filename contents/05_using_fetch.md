@@ -5,6 +5,8 @@
  * Use `fetch` to make HTTP requests in JavaScript.
  * Handle and transform received HTTP responses.
 
+<!-- OMITTED -->
+
 Another powerful feature of JavaScript in the browser is that we can make HTTP requests. It means that, if needed, our JavaScript code can request data from a URL on its own — more precisely, it will ask the browser to perform an HTTP request, and we can handle the received HTTP response.
 
 The simplest way to do this in the browser is to use `fetch`. You can have a look [at the documentation with examples on how to use it here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).

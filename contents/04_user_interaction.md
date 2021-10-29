@@ -6,6 +6,8 @@
  * Use event listeners to handle user interaction with DOM elements
  * Respond to events by updating the DOM
 
+<!-- OMITTED -->
+
 So far, we've only modified the page directly, using functions and properties such as `.querySelector` and `.innerText` to interact with the DOM. But what if we want to do something *only when* the user performs a particular action?
 
 Let's say there is a button a page, such as this one:

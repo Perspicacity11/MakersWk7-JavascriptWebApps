@@ -43,7 +43,7 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 * [Manipulating the DOM with JS](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 * [Using fetch to make HTTP requests](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 * [Going further - Introduction to React tutorial](https://reactjs.org/tutorial/tutorial.html)
-
+* [Technical learning resources](https://airtable.com/shrV1b6EWdf5EHWii/tblokmw6yNUO75ge6)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

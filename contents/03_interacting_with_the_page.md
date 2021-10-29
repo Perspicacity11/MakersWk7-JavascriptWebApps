@@ -6,6 +6,8 @@
  * Use the DOM JavaScript functions to manipulate a page content.
  * Use event listeners to handle user interaction on the page.
 
+<!-- OMITTED -->
+
 When the browser reads the HTML, it then displays a page that corresponds to the contents and structure declared in the HTML page. If CSS is used to apply styles on this structure, it will also turn into a full webpage with clearly defined sections, colours, fonts, text of different sizes, etc.
 
 However an HTML webpage is, on its own, not doing much. We can define forms, and links to navigate to other pages, but this will merely reload the entire browser window on the new page. Most of the logic is happening on the server side, and the browser is only "passively" rendering whichever content the server is sending back.

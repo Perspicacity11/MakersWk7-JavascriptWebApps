@@ -5,6 +5,8 @@
  * Load a JavaScript file in the browser.
  * Use the browser JS console.
 
+<!-- OMITTED -->
+
 ## Exercise - a webpage with JavaScript
 
 The simplest way to run some JavaScript code on a page is using the `<script>` HTML tag.

@@ -4,6 +4,9 @@
 
  * Build a single page application in JS from scratch.
 
+<!-- OMITTED -->
+
+
 ## Backend
 
 To complete this challenge you'll have to:
