@@ -9,6 +9,8 @@ To complete this challenge, you'll need to:
  * handle user interaction with event listeners
  * use a build tool to bundle the JS code for the browser
 
+If you haven't completed the previous section to build the Notes app web server, you might want to use [the exemplar code for this web server (download zip here)](https://github.com/makersacademy/javascript-web-applications/blob/main/resources/notes-backend-server.zip). You can run it using `node index.js`, and it should be able to receive `GET` and `POST` HTTP requests.
+
 ## User stories
 
 Here are the user stories for the notes app project — they'll indicate which features the web interface should implement:

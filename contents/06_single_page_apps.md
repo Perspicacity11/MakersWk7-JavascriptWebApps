@@ -1,4 +1,4 @@
-# Intermezzo — A Tale of Two Web Apps
+# About single-page applications
 
 *You might want to take some time to read the following paragraphs, before moving to the exercise and discussion below.*
 
@@ -42,11 +42,21 @@ Remember we spoke earlier about the distinction between frontend and backend. In
 
 Discuss with your pair (or with yourself!) the following questions. If you disagree on the response, try to understand why and discuss further — ask someone else in your cohort or your coach if needed.
 
- * A piece of JavaScript code is changing an HTML button label from "Submit" to "Submitted" — is it frontend, or backend?
- * A piece of JavaScript code is declaring an HTTP POST endpoint that will accept an HTTP request containing params to insert into a database — is it frontend, or backend?
- * A user clicks on a link on an e-commerce website. The browser reloads the entire page, fetching a whole new HTML page and new resources. Can we say this e-commerce website a "single page application"?
- * A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website a "single page application"?
- * In case of single page applications — what is the only way a frontend web application and its backend can communicate?
+ 1. A piece of JavaScript code is changing an HTML button label from "Submit" to "Submitted" — is it frontend, or backend?
+ 2. A piece of JavaScript code is declaring an HTTP POST endpoint that will accept an HTTP request containing params to insert into a database — is it frontend, or backend?
+ 3. A user clicks on a link on an e-commerce website. The browser reloads the entire page, fetching a whole new HTML page and new resources. Can we say this e-commerce website a "single page application"?
+ 4. A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website a "single page application"?
+ 5. In case of single page applications — what is the only way a frontend web application and its backend can communicate?
+
+<details>
+  <summary>Check answers</summary>
+  
+  1. This is frontend — it deals with changing the UI on the page within the browser.
+  2. This is backend — it happens on the web server, not on the user machine or browser.
+  3. It's not, since the entire page is reloaded.
+  4. It is — the entire page is not reloaded but JS is used to fetch only the required data to update the relevant parts of the page.
+  5. Using HTTP requests/responses (this can be done using `fetch` like you've just learned — or other libraries — and previously a similar method called AJAX).
+</details>
 
 [Next Challenge](07_notes_app_backend.md)
 
