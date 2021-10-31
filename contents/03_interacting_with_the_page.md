@@ -37,6 +37,7 @@ Copy the following HTML code to a new file `index.html` and open it in your brow
     <div class="post" id="post-3">
       A third post
     </div>
+    <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
 ```
@@ -44,7 +45,9 @@ Copy the following HTML code to a new file `index.html` and open it in your brow
 In the browser console, we can type the following:
 
 ```javascript
-> let element = document.querySelector('#post-1');
+// .querySelector accepts the same format of selectors as CSS,
+// so to get the HTML element with ID 'post-1', we prefix it with a #
+> const element = document.querySelector('#post-1'); 
 > element;
 
  <div class="post" id="post-1">A first post</div>
@@ -55,13 +58,15 @@ As you can see, the JS console returned a *representation* of the HTML element t
 The value in `element` now gives us a "handle" on the "real" HTML element that is displayed in the browser. By manipulating this variable, we can now interact with the element that is displayed. We can change the content, CSS style properties, clone it, or remove it from the page altogether. This value is called a `DOM element`, because it represents an element of the `DOM` (Document Object Model) of the page — the tree that represents the elements of the page and their hierarchy. 
 
 To complete the following questions, you'll need to:
- * use the functions [`document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and `document.querySelectorAll` within the browser JS console.
+ * use the functions [`document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and `document.querySelectorAll` within the browser JS console — and understand the difference between them.
  * use the `innerText` property of DOM elements.
  * use the functions `document.createElement` and `document.body.appendChild`
  * use the properties `.className` and `.id`
  * use only JavaScript code (you can't modify HTML elements using the browser's "Elements" tab)
 
 ### Questions
+
+*You may write the code for the three following questions in the browser console - or write them directly to a JS file*
 
 1. Change the content of the first `<div>` to be 'A first post refreshed by JavaScript'.
 2. Define a function `getPostContents` that returns an array containing the three string contents inside the three `<div>` elements:
@@ -71,7 +76,7 @@ To complete the following questions, you'll need to:
 [ 'A first post', 'A second post', 'A third post' ]
 ```
 
-3. Define a function `addNewPost` that takes one argument and adds a new `<div>` element on the page, writing the received argument as the new content. Calling the following should make the HTML change (you can verify this in the "Elements" console tab)
+3. Define a function `addNewPost` that takes one argument (the post title) and adds a new `<div>` element on the page, writing the received argument as the new content. Calling the following should make the HTML change (you can verify this in the "Elements" console tab — and see the new div added on the page too).
 
 ```javascript
 > addNewPost('A fourth post');
@@ -92,22 +97,106 @@ To complete the following questions, you'll need to:
 </div>
 ```
 
-4. Our function `addNewPost` doesn't add yet the `class` and `id` attributes. Modify the code so it does. To generate the number in the `id` property, you could count the number of `post` already present on the page.
+4. Our function `addNewPost` doesn't add yet the `class` and `id` attributes. Modify the code so it does. To generate the number in the `id` property, you could count the number of `post` already present on the page (using `.querySelectorAll('.post').length`).
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  1. Changing the content of the first div:
+  ```js
+  const element = document.querySelector('#post-1'); 
+  element.innerText = 'A first post refreshed by JavaScript';
+  ```
+
+  2. The function `getPostsContents`:
+  ```js
+  const getPostsContents = () => {
+    const elements = document.querySelectorAll('div');
+    const contents = [];
+    elements.forEach(element => {
+      contents.push(element.innerText);
+    });
+
+    return contents;
+  }
+  ```
+
+  3. The function `addNewPost`:
+  ```js
+  const addNewPost = (title) => {
+    const newPostEl = document.createElement('div');
+    // calculate the new number for the html ID
+    const newId = document.querySelectorAll('.post').length + 1;
+
+    newPostEl.innerText = title;
+    newPostEl.className = 'post';
+    newPostEl.id = 'post-' + newId;
+    document.body.appendChild(newPostEl);
+  }
+  ```
+</details>
 
 ## Exercise - bundling 
 
-Do the following in the directory used for the previous exercise: 
+*Do the following in the same directory used for the previous exercise — this time we'll write our functions into JS files:*
 
-1. Write the function `addNewPost` into a file `addNewPost.js`. Then, in a file `index.js`, require this function and call it to add new post element on the page.
+1. Write the previous function `addNewPost` into a file `addNewPost.js` (and export the function from this file). Then, in a file `index.js`, require this function and call it to add a new post element on the page.
 2. Setup the project directory with a `package.json` if not done already and add the required script to run esbuild (refer to the previous section if needed).
-3. Run esbuild to generate a bundle file, and include this file on the HTML page.
-4. Open the HTML page in your browser. There should be four `<div>` displayed.
+3. Run `npm run build` to generate a bundle file, and include this file on the HTML page.
+4. Open the HTML page in your browser. There should be now four `<div>` displayed.
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  1. The file `addNewPost.js`:
+  ```js
+  const addNewPost = (title) => {
+    const newPostEl = document.createElement('div');
+    // calculate the new number for the html ID
+    const newId = document.querySelectorAll('.post').length + 1;
+
+    newPostEl.innerText = title;
+    newPostEl.className = 'post';
+    newPostEl.id = 'post-' + newId;
+    document.body.appendChild(newPostEl);
+  }
+
+  module.exports = addNewPost;
+  ```
+
+  2. The file `index.js`
+  ```js
+  const addNewPost = require('./addNewPost');
+
+  addNewPost('I am a new post');
+  ```
+
+  3. The `package.json` file with the "build" script added — yours might be slightly different:
+  ```json
+  {
+    "dependencies": {
+      "esbuild": "^0.13.12"
+    },
+    "scripts": {
+      "build": "esbuild index.js --bundle --outfile=bundle.js --watch"
+    },
+    "name": "js-dom-exercise",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "author": "",
+    "license": "ISC",
+    "description": ""
+  }
+  ```
+</details>
 
 ## Exercise - testing with the DOM
 
-We'll use Jest again, so let's add it to our project directory:
+We'll use Jest again, so let's add it to our project directory (and install it globally too, if not done already on your machine):
 
 ```
+$ npm install -g jest
 $ npm install jest
 ```
 
@@ -118,8 +207,10 @@ Let's create a file `addNewPost.test.js` in a `tests` directory in order to test
 const addNewPost = require('../addNewPost');
 
 test('displays a post', () => {
-  addNewPost();
+  // given we're calling addNewPost...
+  addNewPost('New test post');
 
+  // ...there should now be 4 posts on the page
   expect(document.querySelectorAll('.post').length).toBe(4);
 });
 ```
@@ -133,9 +224,32 @@ Consider using the "jsdom" test environment
 ReferenceError: document is not defined
 ```
 
-That's because Jest is behaving by default in the "node" environment — without any webpage. Outside of the browser, the JS value `document` (and all its associated DOM functions) do not exist at all. Thankfully, we can tell Jest to run in a different mode "jsdom", in which Jest will *simulate* a browser page for us, so we can use the DOM functions in our tests.
+That's because Jest is behaving by default in the "node" environment — without any webpage. Outside of the browser, the JS value of the variable `document` (and all its associated DOM functions) do not exist at all.
+
+Thankfully, we can ask Jest to run in a different mode called "jsdom", in which Jest will *simulate* a browser page for us, so we can use the DOM functions in our tests.
 
 1. Modify the test file so Jest [can run in the mode "jsdom"](https://jestjs.io/docs/configuration#testenvironment-string). Run the tests again to see a different output.
+
+<details>
+  <summary>Reveal solution</summary>
+  
+  We need to add the doc comment with `@jest-environment` *at the top of the file* as explained on the docs:
+  ```js
+  <!-- OMITTED -->
+
+  const addNewPost = require('../addNewPost');
+
+  test('displays a post', () => {
+    // given we're calling addNewPost...
+    addNewPost('New test post');
+
+    // ...there should now be 4 posts on the page
+    expect(document.querySelectorAll('.post').length).toBe(4);
+  });
+  ```
+</details>
+
+### Fixing the error
 
 This time, we have another error, but it's different:
 
@@ -148,13 +262,13 @@ expect(received).toBe(expected) // Object.is equality
 
 The problem is that, unlike us, Jest doesn't use and browse the HTML webpage. Jest is only "seeing" the JavaScript code — but as far as it knows, the HTML document is totally empty. We need to tell Jest which HTML to use for the "test" page.
 
-2. Set the property `document.body.innerHTML` to the initial HTML body content (the three `<div>` tags) so it looks like the HTML content of the body in our index file. If all the above worked, your test should now pass.
+2. Set the property `document.body.innerHTML` to the initial HTML body content (the three `<div>` tags) so it looks like the HTML content of the body in our index file. If all the above worked, your test should now pass. If the test still fails, double-check that your function `addNewPost` is correct and **sets the HTML class `.post` on the new element that is added on the page**
 
 <details>
 <summary>Reveal solution</summary>
 
 ```javascript
-// tests/addNewPost.test.js
+<!-- OMITTED -->
 const addNewPost = require('../addNewPost');
 
 test('displays a user after a click', () => {
@@ -168,12 +282,11 @@ test('displays a user after a click', () => {
       A third post
     </div>`;
 
-  addNewPost();
+  addNewPost('New test post');
 
   expect(document.querySelectorAll('.post').length).toBe(4);
 });
 ```
-
 </details>
 
 

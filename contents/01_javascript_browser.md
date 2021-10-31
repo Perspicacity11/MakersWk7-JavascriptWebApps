@@ -17,15 +17,17 @@ The simplest way to run some JavaScript code on a page is using the `<script>` H
 <!doctype html>
 <html>
     <head>
+        <title>Hello JavaScript</title>
+    </head>
+    <body>
         <script type="text/javascript">
             console.log('Hello the web!');
         </script>
-    </head>
-    <body></body>
+    </body>
 </html>
 ```
 
-2. Open that page with your browser. How can you check that the JS code is working? What output should you see? [And where is this `console.log` printing?](https://developer.chrome.com/docs/devtools/console/)
+2. Open that page with your browser. [Use the browser's developer console to verify that the message is correctly logged](https://developer.chrome.com/docs/devtools/console/)
 3. Change the message and refresh the page, and see the new message being printed in the console.
 
 ## Exercise - loading an external script.
@@ -33,25 +35,25 @@ The simplest way to run some JavaScript code on a page is using the `<script>` H
 We can also load an external JS file using the `<script>` tag. Consider the following JavaScript code:
 
 ```javascript
+// main.js
+
 let result = 2 * 3;
 console.log(`The result is ${result}`);
 ```
 
 1. Copy this code into a file `main.js`. 
 2. In the same directory than this file, create an HTML file `index.html`, containing a basic HTML 5 skeleton. Open this page with your web browser.
-3. Research [how to load the file `main.js`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#examples) inside the webpage. Once you've updated the code, reload the page and check that the message is printed to the console.
+3. Use [a script tag to load the file `main.js`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#examples) inside the webpage. Once you've updated the code, reload the page and check that the message is printed to the console.
 
 ## The Developer Console
 
-As you found in the previous exercise, using `console.log` in the browser is behaving differently than when running JS in node. Any output is printed to the browser developer console, so remember to have it open at all times when developing with JS in the browser — or at least, to know the shortcut to be able to quickly open it!
+As you found in the previous exercise, using `console.log` in the browser is behaving differently than when running JS in node. Any output is printed to the browser developer console, so remember to have it open at all times when developing with JS in the browser — or at least, to know the shortcut to be able to quickly open it (`Option`+`Command`+`J` on Mac)!
 
 ## About code snippets
 
 In this module, some examples will present code to be executed in the browser console — this code will be written with lines starting with prompt indicators (`>`) indicating what should be typed, and other lines what should be printed.
 
-Other code examples without prompt indicators at all should be written to JavaScript files. Snippets starting with `$` will indicate commands to type in the terminal.
-
-## Exercise - playing with the console
+Other code examples without prompt indicators at all should be written to JavaScript files. Lines starting with `$` will indicate commands to type in the terminal.
 
 **Note that the browser can be very fussy about the `<script>` tag syntax** — if your JS code doesn't seem to execute at all, always verify that the `type` and `src` attributes are correct, and that the tag is closed *with a closing tag*, not the shorter syntax e.g `<script ... />`:
 
@@ -62,13 +64,6 @@ Other code examples without prompt indicators at all should be written to JavaSc
 // incorrect
 <script src="src/js/index.js" type="text/javascript" />
 ```
-
-### Questions
-
-1. Find (or maybe rewrite) your `fizzBuzz` function from the previous JS module, and paste it into a file `fizzbuzz.js`
-2. Load this file in our webpage `index.html`.
-3. Reload the web page and open the developer console. Try to call the function `fizzBuzz` with a number to verify it's working.
-4. In the developer console, write a loop to print the output `fizzBuzz` for the numbers from 1 to 50.
 
 ## Backend and Frontend
 

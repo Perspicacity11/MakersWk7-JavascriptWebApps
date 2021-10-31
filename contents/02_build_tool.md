@@ -37,7 +37,7 @@ Often, this file is also minified and compressed to minimise resources and time 
 There are a few options out there, we'll use [`esbuild`](https://esbuild.github.io/getting-started/) as it is simple enough for us to get started without doing too much configuration.
 
 ```bash
-$ npm install esbuild
+$ npm install -g esbuild
 ```
 
 We can then execute esbuild from the terminal, in our project directory:
@@ -74,13 +74,43 @@ In a new directory `hello_bundle`, create the following file `index.html`:
 ```
 
 To complete this exercise, you'll need to:
- * run esbuild to generate a bundle file from an input file.
- * use a `<script>` tag.
+ * run esbuild to generate a bundle file from an input file, as explained above.
+ * use a `<script>` tag to load the generated bundle file.
 
 ### Questions
-1. Implement a file `hello.js` that prints the message "Hello, bundle" using `console.log`.
+1. Write a file `hello.js` that prints the message "Hello, bundle" using `console.log`.
 2. Using `esbuild` as shown previously, generates a bundle file `bundle.js`
 3. Load this bundle in the HTML index page so when opening it in the browser, the message "Hello, bundle" is displayed in the developer console.
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  1. Contents of `hello.js`:
+  ```js
+  // hello.js
+  console.log('Hello, bundle');
+  ```
+
+  2. Command to run to generate the bundled file:
+  ```bash
+  $ esbuild hello.js --bundle --outfile=bundle.js --watch
+  ```
+
+  3. HTML code loading the bundled file:
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Hello, bundle</title>
+  </head>
+    <body>
+      <script type="text/javascript" src="bundle.js"></script>
+    </body>
+  </html>
+  ```
+
+  4. You should see the message printed in the browser console.
+</details>
 
 ## Exercise - bundling many files
 
@@ -90,20 +120,57 @@ Work through the following questions in a new directory, perhaps called `bundle_
 
 1. Define and export a function `add`, which returns the sum of two numbers, in a file `add.js`.
 2. Define and export a function `multiply`, which returns the product of two numbers, in a file `multiply.js`.
-3. In a file `index.js`, require and use the two previous functions to calculate `(2 + 2) * 4` and print the result to the console.
-4. Use esbuild to generate a single bundle file and load it into an HTML page `index.html`
+3. In a file `index.js`, require and use the two previous functions to calculate `(2 + 2) * 4` and print the result to the console (16).
+4. Use esbuild to generate a single bundle file and load it into an HTML page `index.html`.
+5. Change the numbers in the operation in `index.js` — esbuild should automatically recompile everything (thanks to the `--watch` option) and, after refreshing the page, you should see a new result in the console.
 
 When opening the page, you should see the message with the correct value (16) printed to the console. You should load only a single `<script>`, the bundled file generated with esbuild.
 
-## Exercise - debugging
+<details>
+  <summary>Reveal suggested solution</summary>
 
-Someone from your cohort worked through the previous exercise, however their page doesn't seem to print anything. The HTML `<script>` tag is written correctly, and the JS code seems good as well. They executed esbuild using the following command:
+  1. Contents of `add.js`:
+  ```js
+  module.exports = (a, b) => {
+    return a + b;
+  }
+  ```
 
-```bash
-$ esbuild add.js --bundle  --outfile=bundle.js --watch
-```
+  2. Contents of `multiply.js`:
+  ```js
+  module.exports = (a, b) => {
+    return a * b;
+  }
+  ```
 
-1. What is wrong with what they did? How should you modify the code or command so the page prints the message as expected?
+  3. Contents of `index.js`:
+  ```js
+  const add = require('./add');
+  const multiply = require('./multiply');
+
+  console.log(multiply(add(2, 2), 4));
+  ```
+
+  4. Command to run to generate the bundled file (index.js is our entrypoint — we require everything else from this file, so esbuild knows about the two other JS files):
+  ```bash
+  $ esbuild index.js --bundle --outfile=bundle.js --watch
+  ```
+
+  5. HTML code loading the bundled file:
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Hello, bundle</title>
+  </head>
+    <body>
+      <script type="text/javascript" src="bundle.js"></script>
+    </body>
+  </html>
+  ```
+
+  6. You should see the result (16) printed in the browser console.
+</details>
 
 ## Using NPM scripts to run the build
 

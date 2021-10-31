@@ -6,7 +6,7 @@
 
  * Build a simple single-page application that interacts with a backend server and update its user interface.
 
-Do you remember the Thermostat from the previous JavaScript module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the [exemplar implementation](../resources/thermostat-backend).
+Do you remember the Thermostat from the previous JavaScript module? The following exercises will use the server done in the last step. If you haven't had the chance to work on it, you can use the [exemplar implementation](https://github.com/makersacademy/javascript-web-applications/tree/main/resources/thermostat-backend).
 
 ```bash
 $ cd thermostat-backend

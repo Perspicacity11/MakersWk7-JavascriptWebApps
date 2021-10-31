@@ -9,7 +9,16 @@
 
 Another powerful feature of JavaScript in the browser is that we can make HTTP requests. It means that, if needed, our JavaScript code can request data from a URL on its own — more precisely, it will ask the browser to perform an HTTP request, and we can handle the received HTTP response.
 
-The simplest way to do this in the browser is to use `fetch`. You can have a look [at the documentation with examples on how to use it here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+The simplest way to do this in the browser is to use `fetch`. You can have a look [at the documentation with examples on how to use it here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). Here's a simple example of using it to make a `GET` request to an endpoint that returns some JSON:
+
+```js
+fetch('https://cataas.com/api/cats?tags=cute')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // or do something useful with it
+    });
+```
 
 ## Exercise - fetching Github info
 
@@ -32,6 +41,18 @@ You should see something similar printed on the browser's console:
 }
 ``` 
 
+<details>
+  <summary>Reveal solution</summary>
+
+  ```js
+  fetch('https://api.github.com/repos/sinatra/sinatra')
+    .then(response => response.json())
+    .then(jsonData => {
+        console.log(jsonData);
+    });
+  ```
+</details>
+
 ## Exercise - bundling
 
 To complete this exercise, you'll need to:
@@ -40,19 +61,46 @@ To complete this exercise, you'll need to:
 
 ### Questions
 
-1. In a new project directory, write a file `index.js` containing the function `fetchGithubRepo` which, given a repo name in argument, uses `fetch` to get this repo's info from Github.
-2. From this function, return the JS object representing the repo's info to the caller — remember, the operation is asynchronous, how can you return the received data?
+1. In a new project directory, write a file `fetchGithubRepo.js` containing the function `fetchGithubRepo` (and exporting it) which, given a repo name in argument, uses `fetch` to get this repo's info from Github. Note: the API URL to get a repo's info is `https://api.github.com/repos/[REPO NAME]`
+2. From this function, return the JS object representing the repo's info to the caller — remember, the operation is asynchronous, so you'll likely need to use a callback function so `fetchGithubRepo` can "send back" the result to the caller.
 3. Bundle the code and load the bundled JS file from a new HTML index page.
-4. In `index.js`, call `fetchGithubRepo` with a repo name (like `sinatra/sinatra`) and prints its result.
+4. In the file `index.js`, require and call `fetchGithubRepo` with a repo name (like `sinatra/sinatra`) and prints the result *in the page* using `document.write()` (you can also just `console.log` the result).
 
-If you've done the above correctly, you should be able to open the HTML page and see the same output than in the previous exercise.
+If you've done the above correctly, you should be able to open the HTML page and see the info of Sinatra's repo printed in the console (and/or the page).
+
+<details>
+  <summary>Reveal solution</summary>
+
+  1. Contents of `fetchGithubRepo.js`:
+  ```js
+  const fetchGithubRepo = (repoName, onDataFetched) => {
+      fetch('https://api.github.com/repos/' + repoName)
+        .then(response => response.json())
+        .then(jsonData => {
+            onDataFetched(jsonData);
+        });
+  }
+  ```
+
+  2. Contents of `index.js`:
+  ```js
+  const fetchGithubRepo = ('./fetchGithubRepo');
+
+  fetchGithubRepo('sinatra/sinatra', (repoData) => {
+      console.log(repoData);
+      document.write(JSON.stringify(repoData));
+  });
+  ```
+
+  3. Bundle with `npm run build`.
+</details>
 
 ## Exercise - user interaction and display
 
+We're now going to build a web page where the user can enters a Github repo's name, click on a button, and see the repository info on the page (this data will be fetched from Github's API).
+
 To complete this exercise, you'll need to:
- * Implement an event listener on a button or link.
- * Use `.value` on an JS DOM element representing a text input on the page.
- * Use DOM manipulation to update the content on the page.
+ * use all of what you've learned until now to update the DOM and `fetch` data.
 
 ### Questions
 
@@ -68,7 +116,6 @@ To complete this exercise, you'll need to:
     * The programming language of the repo
 
 4. When the user types in a new repo name and submits it, the different sections should be updated with the new repo content.
-
 
 [Next Challenge](06_single_page_apps.md)
 

@@ -34,6 +34,7 @@ We can ask JavaScript to register a function as callback so, when this event hap
 ```js
 const button = document.querySelector('#click-button'); // getting the button with HTML id "click-button"
 button.addEventListener('click', () => {
+  // this callback function will execute only when the event is triggered
   console.log('The button was clicked!');
 });
 ```
@@ -72,7 +73,23 @@ You'll also need to:
 ### Questions
 
 1. Write the JS code to update the text value in the counter `<span>` element to "1". Be careful of modifying only the inner text, not the element itself.
-2. Make sure that when the button is clicked, the counter is incremented to the next value. You might need to keep a variable in your JS code to hold the current value.
+2. Now add an event listener on the HTML button so when it is clicked, the counter is incremented to the next value. You might need to keep a variable in your JS code to hold the current value. Remember that the counter and the button are two different HTML elements, so you'll likely need two different variables to hold the counter and the button.
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  1. Updating the counter on button click
+  ```js
+  let counter = 0; // using let, since we'll update this variable
+  const counterEl = document.querySelector('#counter');
+  const incrementButton = document.querySelector('#inc-button');
+
+  incrementButton.addEventListener('click', () => {
+    counter += 1;
+    counterEl.innerText = counter;
+  });
+  ```
+</details>
 
 ## Exercise - handling user interaction
 
@@ -82,9 +99,9 @@ This exercise builds on the code from the previous page (the list of posts). To 
 
 ### Questions
 
-1. Add a `<button>` on the page, just before the list of posts.
-2. Add some code in the file `index.js` so, when the button is clicked, a new post is added — you shall use the function `addNewPost` here.
-3. Try out the button in the browser and see if it works.
+1. Add a `<button id="add-post-btn">Add post</button>` on the page, just before the list of posts.
+2. Add some code in the file `index.js` so, when the button is clicked, a new post is added — you shall use the function `addNewPost` that you previously wrote here.
+3. Try out the button in the browser and see if it works (it should add a new post on the page when you click it).
 4. Add an `<input>` element (a text input field) on the page just before the button. 
 5. Modify the event listener code in `index.js` so it uses the text entered in the text field as the new post content.
 
@@ -94,19 +111,37 @@ If you've completed all the above correctly, you should be able to:
  * see a new post "My Javascript app is awesome" be added on the page, after the others.
  * repeat those three steps as much as you'd like, to keep adding new posts.
 
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  1. The file `index.js`:
+  ```js
+  const addNewPost = require('./addNewPost');
+
+  const buttonEl = document.querySelector('#add-post-btn');
+  const inputEl = document.querySelector('input');
+
+  buttonEl.addEventListener('click', () => {
+    const newTitle = inputEl.value;
+    addNewPost(newTitle);
+  });
+  ```
+</details>
+
 ## Exercise - debugging
 
-Someone from your cohort wrote the following code to add a new DOM element on their webpage: 
+Someone from your cohort wrote the following function to add a new DOM element on their webpage: 
 
 ```javascript
-const addNewElement = () => {
+const addNewPost = () => {
   let newElement = document.createElement('div')
+  newElement.className = '.post';
   newElement.innerText = 'Welcome to my website';
   newElement.style.color = 'green';
 }
 ```
 
-However, the element is not displayed when they call `addNewElement();` and the page stays blank. Can you see why?
+However, the element is not displayed on the page when they call `addNewElement();`, and the page stays blank. Can you see why?
 
 
 
