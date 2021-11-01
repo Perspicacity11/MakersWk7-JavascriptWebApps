@@ -19,8 +19,8 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 4. [Interacting with the page - Events](./contents/04_user_interaction.md).
 5. [Using fetch to call APIs](./contents/05_using_fetch.md).
 6. [Single web applications](./contents/06_single_page_apps.md).
-7. [Building a notes app - backend](./contents/08_notes_app_backend.md).
-8. [Building a notes app - frontend](./contents/09_notes_app_frontend.md).
+7. [Building a notes app - backend](./contents/07_notes_app_backend.md).
+8. [Building a notes app - frontend](./contents/08_notes_app_frontend.md).
 
 ## End of unit challenge
 
