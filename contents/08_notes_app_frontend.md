@@ -41,7 +41,7 @@ So I can record notes with fun little pictures
 
 You should use [this service](https://makers-emojify.herokuapp.com) to convert
 shortcodes to emoji. In this way you will have the opportunity to learn how to
-[call external APIs](../pills/calling_apis_in_javascript.md) using pure Javascript.
+[call external APIs](https://github.com/makersacademy/course/blob/main/pills/calling_apis_in_javascript.md) using pure Javascript.
 
 ## Mockup of the UI
 
