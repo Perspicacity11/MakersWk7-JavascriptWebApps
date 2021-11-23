@@ -5,6 +5,7 @@
  * Explain what are [browser events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#a_simple_example)
  * Use event listeners to handle user interaction with DOM elements
  * Respond to events by updating the DOM
+ * Test user interaction with Jest
 
 <!-- OMITTED -->
 
@@ -95,9 +96,9 @@ You'll also need to:
 
 ## Exercise - testing user interaction
 
-We now want to write Jest tests for the counter page, to verify that a click on the button increments the counter and that the result is reflected on the page.
+We now want to write Jest tests for the counter page, to verify that a click on the button increments the counter and that the result is reflected on the page. Before getting back to work on the counter, this exercise will introduce how we can test the response to user interaction with Jest.
 
-Here's an example of how such a test can be written using Jest. In this example, when the HTML button (with id `button`) is clicked, we want to test that the HTML paragraph (with id `message`) contained in the document is going to contain the text "Hello, Jest".
+Here's an example of how such a test can be written. In this example, when the HTML button (with id `button`) is clicked, we want to test that the HTML paragraph (with id `message`) contained in the document is going to contain the text "Hello, Jest".
 
 ```js
 /**
@@ -106,7 +107,7 @@ Here's an example of how such a test can be written using Jest. In this example,
 
 test('displays a user after a click', () => {
   // Set up our document body
-  // (we only care about the paragraph and the button for this test, we don't need any other HTML)
+  // (remember this value "mocks" our HTML page so Jest can use it)
   document.body.innerHTML = `<div>
       <button id="button">Display message</button>
       <p id="message"></p>
@@ -150,8 +151,8 @@ To complete this exercise, you'll need to:
 ### Questions
 
 1. Initialise a new project directory `display-message` with `npm -y` and install Jest.
-2. Copy the contents of the test file above in a file `displayMessage.test.js`.
-3. Run `jest` — the test should fail, as so far we have no code handling the interaction on the button to modify the contents of the paragraph (you can open `index.html` in your browser and try it for yourself)
+2. Copy the contents of the test file above in a file `displayMessage.test.js`, and the HTML page content in `index.html`.
+3. Run `jest` — the test should fail, as so far we have no code handling the interaction on the button to modify the contents of the paragraph (you can open `index.html` in your browser and try it for yourself — nothing happens)
 
 ```bash
 ● displays a user after a click

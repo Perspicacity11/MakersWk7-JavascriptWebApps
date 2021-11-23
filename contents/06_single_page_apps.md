@@ -58,7 +58,7 @@ Discuss with your pair (or with yourself!) the following questions. If you disag
   5. Using HTTP requests/responses (this can be done using `fetch` like you've just learned — or other libraries — and previously a similar method called AJAX).
 </details>
 
-[Next Challenge](07_notes_app_backend.md)
+[Next Challenge](07_notes_app_frontend.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
