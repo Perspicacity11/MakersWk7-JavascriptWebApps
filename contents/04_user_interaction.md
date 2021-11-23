@@ -45,7 +45,7 @@ After running the above JS code — either in the console or from a loaded file 
 
 ## Exercise - a counter
 
-For this exercise, you may use the following HTML page to get you started:
+For this exercise, initialise a new project directory `counter`, and use the following `index.html` HTML page to get you started:
 
 ```html
 <!DOCTYPE html>
@@ -80,6 +80,8 @@ You'll also need to:
 
   1. Updating the counter on button click
   ```js
+  // index.js
+
   let counter = 0; // using let, since we'll update this variable
   const counterEl = document.querySelector('#counter');
   const incrementButton = document.querySelector('#inc-button');
@@ -91,19 +93,163 @@ You'll also need to:
   ```
 </details>
 
+## Exercise - testing user interaction
+
+We now want to write Jest tests for the counter page, to verify that a click on the button increments the counter and that the result is reflected on the page.
+
+Here's an example of how such a test can be written using Jest. In this example, when the HTML button (with id `button`) is clicked, we want to test that the HTML paragraph (with id `message`) contained in the document is going to contain the text "Hello, Jest".
+
+```js
+/**
+ * @jest-environment jsdom
+ */
+
+test('displays a user after a click', () => {
+  // Set up our document body
+  // (we only care about the paragraph and the button for this test, we don't need any other HTML)
+  document.body.innerHTML = `<div>
+      <button id="button">Display message</button>
+      <p id="message"></p>
+    </div>`;
+
+  // Simulate a click on our button
+  const button = document.querySelector('#button');
+  button.click();
+
+  // And assert that the paragraph's innerText has changed
+  expect(document.querySelector('#message').innerText).toBe('Hello, Jest');
+});
+```
+
+And here's the HTML code for the page `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+  </head>
+  <body>
+    <div>
+      <p id="message"></p>
+      <button id="button">Display message</button>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
+```
+
+To complete this exercise, you'll need to:
+ * Write JavaScript code to handle user interaction with an event listener.
+ * Use `.innerText` to modify an element's content.
+
+### Questions
+
+1. Initialise a new project directory `display-message` with `npm -y` and install Jest.
+2. Copy the contents of the test file above in a file `displayMessage.test.js`.
+3. Run `jest` — the test should fail, as so far we have no code handling the interaction on the button to modify the contents of the paragraph (you can open `index.html` in your browser and try it for yourself)
+
+```bash
+● displays a user after a click
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Hello, Jest"
+    Received: undefined
+```
+
+4. Write the contents of `index.js` to make this test pass — don't forget to require the file in the test file (right after setting `document.body.innerHTM`), as Jest also needs to "know" about it:
+
+```js
+// in displayMessage.test.js
+document.body.innerHTML = `<div>
+      <button id="button">Display message</button>
+      <p id="message"></p>
+    </div>`;
+
+require('./index');
+```
+
+5. Once your code is written, the test should pass. You should also be able to open `index.html` in your browser and see it working.
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  ```js
+  // index.js
+
+  const button = document.querySelector('#button');
+  const paragraph = document.querySelector('#message');
+
+  button.addEventListener('click', () => {
+    paragraph.innerText = 'Hello, Jest';
+  });
+  ```
+</details>
+
+## Exercise - testing the counter
+
+Let's go back to the counter exercise — we're going to write a test to verify that the counter value is incrementing when the increment button is clicked. You should work on the following questions in the same project directory used for that exercise (the `counter` directory).
+
+1. Install Jest in this project, if not done already.
+2. In a test file `counter.test.js`, use what you've learned in the previous exercise to write a test case — it should assert that *clicking on the increment button does increment the counter element*
+3. This test should pass (you shouldn't have to modify the contents of `index.js`). The counter should still be incremented normally when running in the browser.
+
+<details>
+  <summary>Reveal suggested solution</summary>
+
+  ```js
+  // counter.test.js
+
+  /**
+  * @jest-environment jsdom
+  */
+
+  test('displays a user after a click', () => {
+    // Set up our document body
+    document.body.innerHTML = `<div>
+        <span id="counter">0</span>
+        <button id="inc-button">Increment</button>
+      </div>`;
+
+    require('./index');
+
+    // Simulate two clicks on our button
+    const button = document.querySelector('#inc-button');
+    button.click();
+    button.click();
+
+    // Assert that the counter has changed to 2
+    expect(document.querySelector('#counter').innerText).toBe(2);
+  });
+  ```
+</details>
+
 ## Exercise - handling user interaction
 
 This exercise builds on the code from the previous page (the list of posts). To complete the following, you'll need to: 
  * use the [`addEventListener` function](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#adding_and_removing_event_handlers) on a DOM element that can "receive" user interaction.
- * use the `.value` property on a DOM element that represents a text input.
+ * write a test simulating user interaction on the DOM, like on the previous exercises.
 
 ### Questions
 
-1. Add a `<button id="add-post-btn">Add post</button>` on the page, just before the list of posts.
-2. Add some code in the file `index.js` so, when the button is clicked, a new post is added — you shall use the function `addNewPost` that you previously wrote here.
-3. Try out the button in the browser and see if it works (it should add a new post on the page when you click it).
-4. Add an `<input>` element (a text input field) on the page just before the button. 
-5. Modify the event listener code in `index.js` so it uses the text entered in the text field as the new post content.
+1. Add a `<button id="add-post-btn">Add post</button>` on the HTML page, just before the list of posts.
+2. In the file `addNewPost.test.js`, also add this button to the HTML code set to `document.body.innerHTML`. Remember this HTML "mirrors" or "mocks" the HTML code on our index page, for Jest to use.
+3. Modify the test so, instead of directly calling the function `addNewPost`, it simulates a click on the button `#add-post-btn` instead. At this point, the test should now fail — we need to implement the event listener on the button.
+4. Write some code in the file `index.js` so, when the button is clicked, a new post is added — you shall use the function `addNewPost` that you previously wrote here.
+5. The test should now pass. Try out the button in the browser as well, and see if it works (it should add a new post on the page when you click it).
+
+## Exercise - adding an input
+
+This is building, again, on the previous exercise. To complete the following, you'll need to: 
+ * use the `.value` property on a DOM element that represents a text input.
+
+1. Add an `<input>` element (a text input field) on the page just before the button. 
+2. Modify the event listener code in `index.js` so it uses the text entered in the text field as the new post content.
 
 If you've completed all the above correctly, you should be able to: 
  * type something specific, like "My Javascript app is awesome" in the text field.
@@ -126,23 +272,35 @@ If you've completed all the above correctly, you should be able to:
     addNewPost(newTitle);
   });
   ```
+
+  2. The file `addNewPost.test.js`:
+  ```js
+  /**
+  * @jest-environment jsdom
+  */
+
+  test('displays a user after a click', () => {
+    document.body.innerHTML = `<button id="add-post-btn">Add post</button>
+      <div class="post" id="post-1">
+        A first post
+      </div>
+      <div class="post" id="post-2">
+        A second post
+      </div>
+      <div class="post" id="post-3">
+        A third post
+      </div>`;
+
+    require('./index');
+
+    // addNewPost();
+    const button = document.querySelector('#add-post-btn')
+    button.click();
+
+    expect(document.querySelectorAll('.post').length).toBe(4);
+  });
+  ```
 </details>
-
-## Exercise - debugging
-
-Someone from your cohort wrote the following function to add a new DOM element on their webpage: 
-
-```javascript
-const addNewPost = () => {
-  let newElement = document.createElement('div')
-  newElement.className = '.post';
-  newElement.innerText = 'Welcome to my website';
-  newElement.style.color = 'green';
-}
-```
-
-However, the element is not displayed on the page when they call `addNewElement();`, and the page stays blank. Can you see why?
-
 
 
 [Next Challenge](05_using_fetch.md)
