@@ -117,6 +117,8 @@ To complete this exercise, you'll need to:
 
 4. When the user types in a new repo name and submits it, the different sections should be updated with the new repo content.
 
+After attempting this exercise, you can download [an exemplar of a solution here](./resources/fetch-github.zip).
+
 [Next Challenge](06_single_page_apps.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

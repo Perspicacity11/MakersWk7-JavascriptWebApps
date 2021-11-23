@@ -235,7 +235,9 @@ Thankfully, we can ask Jest to run in a different mode called "jsdom", in which 
   
   We need to add the doc comment with `@jest-environment` *at the top of the file* as explained on the docs:
   ```js
-  <!-- OMITTED -->
+  /**
+   * @jest-environment jsdom
+   */
 
   const addNewPost = require('../addNewPost');
 
@@ -268,7 +270,9 @@ The problem is that, unlike us, Jest doesn't use and browse the HTML webpage. Je
 <summary>Reveal solution</summary>
 
 ```javascript
-<!-- OMITTED -->
+/**
+ * @jest-environment jsdom
+ */
 const addNewPost = require('../addNewPost');
 
 test('displays a user after a click', () => {
