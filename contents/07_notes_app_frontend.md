@@ -16,6 +16,8 @@ To work on this exercise, you'll have to use [the notes backend web server (down
  * `GET /notes` - gets the list of notes
  * `POST /notes` - adds a new note with a JSON body such as `'{"title":"Groceries list", "content": "Tomatoes, yoghurt, honey, milk"}'`
 
+You can also [experiment with the `curl` command to verify the endpoints are working](#testing-the-notes-backend-with-curl).
+
 ## User stories
 
 Here are the user stories for the notes app project — they'll indicate which features the web interface should implement:
@@ -65,7 +67,59 @@ To complete this part, you'll need to:
 ![Notes app home page mockup](resources/notes-home-page-mock-up.png)
 ![Notes app note page mockup](resources/notes-note-page-mock-up.png)
 
+## Testing the notes backend with curl
 
+To explore the backend server endpoints, you can use `curl` (with the utility command `jq` to pretty-print the JSON response) — it should respond to the following HTTP requests, in order:
+
+```bash
+curl -s -XGET http://localhost:3000/notes | jq
+
+[]
+```
+
+```bash
+curl -s -XPOST -H 'content-type: application/json' http://localhost:3000/notes -d '{"title":"Groceries list", "content": "Tomatoes, yoghurt, honey, milk"}' | jq
+
+{
+  "title": "Groceries list",
+  "content": "Tomatoes, yoghurt, honey, milk"
+}
+```
+
+```bash
+curl -s -XGET http://localhost:3000/notes | jq
+
+[
+  {
+    "title": "Groceries list",
+    "content": "Tomatoes, yoghurt, honey, milk"
+  }
+]
+```
+
+```bash
+curl -s -XPOST -H 'content-type: application/json' http://localhost:3000/notes -d '{"title":"Birthday present", "content": "Remember to buy birthday present for Max"}' | jq
+
+{
+  "title": "Birthday present",
+  "content": "Remember to buy birthday present for Max"
+}
+```
+
+```bash
+curl -s -XGET http://localhost:3000/notes | jq
+
+[
+  {
+    "title": "Groceries list",
+    "content": "Tomatoes, yoghurt, honey, milk"
+  },
+  {
+    "title": "Birthday present",
+    "content": "Remember to buy birthday present for Max"
+  }
+]
+```
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
