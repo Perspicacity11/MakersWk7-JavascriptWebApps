@@ -73,7 +73,7 @@ If you've done the above correctly, you should be able to open the HTML page and
 
   1. Contents of `fetchGithubRepo.js`:
   ```js
-  const fetchGithubRepo = (repoName, onDataFetched) => {
+  export const fetchGithubRepo = (repoName, onDataFetched) => {
       fetch('https://api.github.com/repos/' + repoName)
         .then(response => response.json())
         .then(jsonData => {
@@ -84,7 +84,7 @@ If you've done the above correctly, you should be able to open the HTML page and
 
   2. Contents of `index.js`:
   ```js
-  const fetchGithubRepo = ('./fetchGithubRepo');
+  const { fetchGithubRepo } = require('./fetchGithubRepo');
 
   fetchGithubRepo('sinatra/sinatra', (repoData) => {
       console.log(repoData);
