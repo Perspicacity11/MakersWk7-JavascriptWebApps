@@ -44,8 +44,8 @@ Discuss with your pair (or with yourself!) the following questions. If you disag
 
  1. A piece of JavaScript code is changing an HTML button label from "Submit" to "Submitted" — is it frontend, or backend?
  2. A piece of JavaScript code is declaring an HTTP POST endpoint that will accept an HTTP request containing params to insert into a database — is it frontend, or backend?
- 3. A user clicks on a link on an e-commerce website. The browser reloads the entire page, fetching a whole new HTML page and new resources. Can we say this e-commerce website a "single page application"?
- 4. A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website a "single page application"?
+ 3. A user clicks on a link on an e-commerce website. The browser reloads the entire page, fetching a whole new HTML page and new resources. Can we say this e-commerce website is a "single page application"?
+ 4. A user submits a form on a social media website to post a new message on their page. Behind the scenes, the JavaScript code uses `fetch` to make a POST HTTP request to create the new content on the website backend. When the HTTP response is received, JavaScript replaces only the relevant parts of the page, using DOM functions. Can we say this website is a "single page application"?
  5. In case of single page applications — what is the only way a frontend web application and its backend can communicate?
 
 <details>
