@@ -11,7 +11,13 @@ To complete this challenge, you'll need to:
 
 ## Running the notes backend 
 
-To work on this exercise, you'll have to use [the notes backend web server (download zip here)](https://github.com/makersacademy/javascript-web-applications/blob/main/resources/notes-backend-server.zip). You can run it using `node index.js`, and it should be able to receive `GET` and `POST` HTTP requests. You should be able to launch it using `node index.js`. This web server is made using express and implement two HTTP endpoints:
+To work on this exercise, you'll have to use [the notes backend web server (download zip here)](https://github.com/makersacademy/javascript-web-applications/blob/main/resources/notes-backend-server.zip). This web server is made using express.
+
+Once you have downloaded it, `cd` into the directory and run it using `node index.js`. You may have to use npm to install dependencies.
+You'll know it's running when it says something like: `Server listening on http://localhost:3000`. Leave it running in the background!
+
+This server is now able to receive `GET` and `POST` HTTP requests.
+It implements two HTTP endpoints:
 
  * `GET /notes` - gets the list of notes
  * `POST /notes` - adds a new note with a JSON body such as `'{"title":"Groceries list", "content": "Tomatoes, yoghurt, honey, milk"}'`
