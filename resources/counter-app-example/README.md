@@ -1,5 +1,7 @@
 # A simple counter
 
+Download the [zip archive for the project here](./counter-app.zip).
+
 How to setup:
 ```
 npm install -g esbuild
