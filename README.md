@@ -11,15 +11,33 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 * Use the DOM API to build a web user interface for this program.
 * Build a single-page web application fetching and updating remote data using JS.
 
-## Sequence
+## Start here
+
+1. [Explore the counter web application
+exemplar](./resources/counter-app-example)
+
+## Pairing sequence
 
 1. [Javascript and the browser](./contents/01_javascript_browser.md).
-2. [Using a build tool](./contents/02_build_tool.md).
-3. [Interacting with the page - DOM](./contents/03_interacting_with_the_page.md).
-4. [Interacting with the page - Events](./contents/04_user_interaction.md).
-5. [Using fetch to call APIs](./contents/05_using_fetch.md).
-6. [Single web applications](./contents/06_single_page_apps.md).
-7. [Building a notes app](./contents/07_notes_app_frontend.md).
+2. [Using a build tool I](./contents/02_build_tool.md).
+3. [Using a build tool II](./contents/03_build_tool_2.md).
+4. [Scaffolding the notes app](./contents/04_notes_app_scaffold.md).
+5. [Test-driving the model class](./contents/05_test_driving_notes_class.md).
+6. [Interacting with the page I](./contents/06_interacting_with_the_page.md).
+7. [Interacting with the page II](./contents/07_modifying_the_page.md).
+8. [Interacting with the page III](./contents/08_testing_page_content.md).
+9. [Displaying a new note on the page I](./contents/09_adding_new_note.md).
+10. [Displaying a new note on the page II](./contents/10_adding_new_note_2.md).
+11. [Handling user interaction I](./contents/11_user_interaction.md).
+12. [Handling user interaction II](./contents/12_user_interaction_input.md).
+13. [Letting the user add a note I](./contents/13_adding_a_note_ui.md).
+14. [Letting the user add a note II](./contents/14_fixing_list_refresh.md).
+15. [Discovering `fetch`](./contents/15_discovering_fetch.md).
+16. [Using the notes backend](./contents/16_connecting_to_server.md).
+17. [Fetching the list of notes](./contents/17_fetch_notes_from_backend.md).
+18. [Creating a new note on the backend](./contents/18_creating_new_note_server.md).
+19. [Making it look nice](./contents/19_making_it_look_nice.md).
+20. [Post challenge extension](./contents/20_deleting_note.md).
 
 ## End of unit challenge
 

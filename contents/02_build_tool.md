@@ -1,210 +1,63 @@
-# Using a build tool
+# Bundling using a build tool
 
 ## Objectives
 
- * Understand why a build tool is useful.
- * Use esbuild to bundle different JS files together.
- * Use esbuild and NPM scripts to run a build process for JS webapp.
+ * Use esbuild to bundle a JavaScript file.
 
-Real JavaScript programs are usually composed of many different files, much like programs in other languages. As seen previously, we can use the `<script>` tag to load JS files in the browser and run them. However, as we add more Javascript files (functions, classes, etc) in our application, the number of files to load is becoming harder to manage. Also, some JS files will need to be loaded *after* others they might depend on, which could lead to situation like this:
+JavaScript programs are usually composed of many different files. As we add more
+files (functions, classes, etc) to our application, the number of files to load
+on the page is becoming harder to manage.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My web app</title>
-</head>
-<body>
-  (...)
+To avoid this, we can use what is called a *build tool*. Most modern JavaScript
+codebases will use some kind of build tool as part of their tooling.
 
-  <script src="src/js/user_auth.js" type="text/javascript"></script>
-  <script src="src/js/login.js" type="text/javascript"></script>
-  <script src="src/js/signup.js" type="text/javascript"></script>
-  <script src="src/js/post.js" type="text/javascript"></script>
-  <script src="src/js/post_loader.js" type="text/javascript"></script>
-  (...)
-</body>
-</html>
-```
-
-To avoid this (and other issues as well), we can use what is called a *build tool*. Most modern JavaScript codebases will use some kind of build tool as part of their tooling. On a high level, a build tool "loads" all the required JS files, figures out in which order they should be loaded (depending on which depends on which), and generates a single "bundled" JavaScript file, that we can simply load into the browser.
-
-Often, this file is also minified and compressed to minimise resources and time needed to transmit it over the network. Some complex JavaScript codebases might represent a few megabytes, and thousands of lines of code, so that's also important!
-
-There are a few options out there, we'll use [`esbuild`](https://esbuild.github.io/getting-started/) as it is simple enough for us to get started without doing too much configuration.
+We'll use [`esbuild`](https://esbuild.github.io/getting-started/) as it is
+simple enough for us to get started without doing too much configuration.
+**You'll need to install it globally using `npm`:**
 
 ```bash
 $ npm install -g esbuild
 ```
 
-We can then execute esbuild from the terminal, in our project directory:
+## Exercise
 
+**Using the same project directory** than in the previous section, we'll use
+`esbuild` to "bundle" our main source file `index.js` into a new file
+`bundle.js` — we'll also refer to this file as the **bundle file** (nothing to
+do with Ruby's `bundle` though!).
+
+### Questions
+
+1. In a new terminal (and in the exercise directory), run the command `npm run
+   build`. **Keep this process running in the background.**
+
+You should get the following output:
 ```bash
-$ esbuild index.js --bundle --outfile=bundle.js --watch
+> esbuild index.js --bundle  --outfile=bundle.js --watch
+
+[watch] build finished, watching for changes...
 ```
+2. Observe the contents of the exercise directory — there should be a new file
+   called `bundle.js`.
+3. Update the `<script>` tag inside the HTML page to point to this new file,
+   instead of `index.js`.
+4. Reload the HTML page in your browser and verify in the console **that you can
+   see the same output as before.**
 
- * `index.js` is the *entrypoint* of our JavaScript program. In other words, is the file that *requires* other files, but that is not required by any other.
- * `bundle.js` is the name of the bundled file that will be loaded by the browser.
- * the `--watch` option tells esbuild to automatically regenerate the bundle when changes to source files are made.
+### Troubleshooting common problems
 
-Here's a diagram of how a build tool such as esbuild is compiling source files into a bundled file loaded by the browser:
+If this last step doesn't work, it's likely because:
+* the command `npm run build` didn't work as expected — make sure you installed
+  `esbuild` globally with `npm install -g esbuild`, and that you run `npm
+  install` in the project directory.
+* the `<script>` tag is incorrect, or doesn't point to the right file.
 
-![Build tool schema](resources/build-tool.svg)
+In the next section, we'll look at how we can bundle different JS files (or
+**modules**) into a single bundle file.
 
-## Exercise - Hello, bundle
 
-In a new directory `hello_bundle`, create the following file `index.html`:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello, bundle</title>
-</head>
-  <body>
-
-  </body>
-</html>
-```
-
-To complete this exercise, you'll need to:
- * run esbuild to generate a bundle file from an input file, as explained above.
- * use a `<script>` tag to load the generated bundle file.
-
-### Questions
-1. Write a file `hello.js` that prints the message "Hello, bundle" using `console.log`.
-2. Using `esbuild` as shown previously, generates a bundle file `bundle.js`
-3. Load this bundle in the HTML index page so when opening it in the browser, the message "Hello, bundle" is displayed in the developer console.
-
-<details>
-  <summary>Reveal suggested solution</summary>
-
-  1. Contents of `hello.js`:
-  ```js
-  // hello.js
-  console.log('Hello, bundle');
-  ```
-
-  2. Command to run to generate the bundled file:
-  ```bash
-  $ esbuild hello.js --bundle --outfile=bundle.js --watch
-  ```
-
-  3. HTML code loading the bundled file:
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Hello, bundle</title>
-  </head>
-    <body>
-      <script type="text/javascript" src="bundle.js"></script>
-    </body>
-  </html>
-  ```
-
-  4. You should see the message printed in the browser console.
-</details>
-
-## Exercise - bundling many files
-
-Work through the following questions in a new directory, perhaps called `bundle_exercise_2`, to avoid confusion with the previous exercise.
-
-### Questions
-
-1. Define and export a function `add`, which returns the sum of two numbers, in a file `add.js`.
-2. Define and export a function `multiply`, which returns the product of two numbers, in a file `multiply.js`.
-3. In a file `index.js`, require and use the two previous functions to calculate `(2 + 2) * 4` and print the result to the console (16).
-4. Use esbuild to generate a single bundle file and load it into an HTML page `index.html`.
-5. Change the numbers in the operation in `index.js` — esbuild should automatically recompile everything (thanks to the `--watch` option) and, after refreshing the page, you should see a new result in the console.
-
-When opening the page, you should see the message with the correct value (16) printed to the console. You should load only a single `<script>`, the bundled file generated with esbuild.
-
-<details>
-  <summary>Reveal suggested solution</summary>
-
-  1. Contents of `add.js`:
-  ```js
-  module.exports = (a, b) => {
-    return a + b;
-  }
-  ```
-
-  2. Contents of `multiply.js`:
-  ```js
-  module.exports = (a, b) => {
-    return a * b;
-  }
-  ```
-
-  3. Contents of `index.js`:
-  ```js
-  const add = require('./add');
-  const multiply = require('./multiply');
-
-  console.log(multiply(add(2, 2), 4));
-  ```
-
-  4. Command to run to generate the bundled file (index.js is our entrypoint — we require everything else from this file, so esbuild knows about the two other JS files):
-  ```bash
-  $ esbuild index.js --bundle --outfile=bundle.js --watch
-  ```
-
-  5. HTML code loading the bundled file:
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Hello, bundle</title>
-  </head>
-    <body>
-      <script type="text/javascript" src="bundle.js"></script>
-    </body>
-  </html>
-  ```
-
-  6. You should see the result (16) printed in the browser console.
-</details>
-
-## Using NPM scripts to run the build
-
-Memorising how to run the `esbuild` command can be hard, so we can use NPM scripts to save some time. If your project directory doesn't contain a file `package.json` yet, remember you can generate one by running `npm init`.
-
-```json
-{
-  "name": "bundle_exercise",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "esbuild index.js --bundle  --outfile=bundle.js --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
-}
-
-```
-
-## Note for the next steps
-
-In the next sections, we'll assume that a "build" script is defined inside the `package.json`, like we've just seen. To simplify, we'll be able to run the command to build and watch for changes using NPM:
-
-```
-$ npm run build
-```
-
-We'll also assume that:
- * our entrypoint file will *always* be named `index.js`, and this file will require all other files needed for our program to function. 
- * our bundle file will *always* be named `bundle.js`, and this will be the only file loaded by the HTML page.
-
-[Next Challenge](03_interacting_with_the_page.md)
+[Next Challenge](03_build_tool_2.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
