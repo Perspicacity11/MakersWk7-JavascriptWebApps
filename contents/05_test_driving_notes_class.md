@@ -4,19 +4,18 @@ You will **use the same project directory `notes-app`** for this new task.
 
 ## Exercise - test-driving the class
 
-You will now implement, test-driving, a JavaScript class to hold our program
-data (the **model** class).
+You will now implement, test-driving, a JavaScript class to hold our program data (the
+**model** class).
 
-Here's an acceptance criteria for this class — how we want it to behave, once
-implemented:
+Here's an acceptance criteria for this class — how we want it to behave, once implemented:
 
 ```js
 const model = new NotesModel();
 
 model.getNotes(); // should return []
 
-model.add('Buy milk');
-model.add('Go to the gym');
+model.addNote('Buy milk');
+model.addNote('Go to the gym');
 
 model.getNotes(); // should now return ['Buy milk', 'Go to the gym']
 
@@ -27,40 +26,35 @@ model.getNotes(); // should now return []
 
 ### Questions
 
-1. Install `jest` in the project directory with `npm install --save jest` and
-   create a test file `notesModel.test.js`.
-2. Write the test cases for `NotesModel` (at least three) reflecting the
-   acceptance criteria shown above.
-3. Test-drive and implement the `NotesModel` class (in `notesModel.js`), one
-   test at a time.
+1. Install `jest` in the project directory with `npm install --save jest` and create a
+   test file `notesModel.test.js`.
+2. Write the test cases for `NotesModel` (at least three) verifying the acceptance
+   criteria shown above, and test-drive the `NotesModel` class (in `notesModel.js`), one test at a time. To test arrays, prefer the use of `.toEqual()` matcher over `.toBe()`.
 
 ## Exercise - including the class on the page
 
-We've now implemented the class `NotesModel` — but it is not loaded by our web
-page yet. It only exists on its own, outside of the web page. Here's a rough
-diagram on how things are in our `notes-app` project, as of now:
+We've now implemented the class `NotesModel` — but it is not loaded by our web page yet.
+It only exists on its own, outside of the web page. Here's a rough diagram on how things
+are in our `notes-app` project, as of now:
 
 ![Class not required by main file](./resources/notes-model-1.png)
 
-By requiring the `NotesModel` class from the main file `index.js`, it will be
-"bundled" too into the bundle file, and loaded by the web page.
+By requiring the `NotesModel` class from the main file `index.js`, it will be "bundled"
+too into the bundle file, and loaded by the web page.
 
 ### Questions
 
 1. Update the code in the main file so it:
-    * `require`s the `NotesModel` class and creates a new instance of it in a
-      variable.
-    * `console.log` the current list of notes, returned by the `getNotes()`
-      method.
+    * `require`s the `NotesModel` class and creates a new instance of it in a variable.
+    * `console.log` the current list of notes, returned by the `getNotes()` method.
 2. Make sure `npm run build` is running.
-3. Open (or refresh) the web page — you should see the empty array of notes `[]`
-   being logged in the console.
+3. Open (or refresh) the web page — you should see the empty array of notes `[]` being
+   logged in the console.
 4. How would you modify the previous diagram to reflect the changes you made?
 
 ## Troubleshooting
 
-* When writing your tests using the `.toBe()` Jest matcher, you might run into
-  this error:
+* When writing your tests using the `.toBe()` Jest matcher, you might run into this error:
    ```
    Expected: ["Buy milk"]
    Received: serializes to the same string
@@ -69,8 +63,8 @@ By requiring the `NotesModel` class from the main file `index.js`, it will be
    You should use the `.toEqual()` matcher to test arrays, as explained in [this
    StackOverflow answer](https://stackoverflow.com/a/46256046).
 
-* If you're getting the error `TypeError: NotesModel is not a constructor` —
-  maybe you forgot to export the class from its file?
+* If you're getting the error `TypeError: NotesModel is not a constructor` — maybe you
+  forgot to export the class from its file?
 
 <details>
   <summary>Reveal suggested walthrough</summary>
@@ -131,7 +125,8 @@ By requiring the `NotesModel` class from the main file `index.js`, it will be
 
 ---
 
-We now have a project scaffold for our notes app, with a simple model class. We'll come back to it — but first, let's learn how to interact with the web page using JavaScript.
+We now have a project scaffold for our notes app, with a simple model class. We'll come
+back to it — but first, let's learn how to interact with the web page using JavaScript.
 
 [Next Challenge](06_interacting_with_the_page.md)
 

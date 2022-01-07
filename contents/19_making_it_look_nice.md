@@ -1,4 +1,16 @@
-# Making it look nice
+# Bonus — Making it look nice
+
+You made it this far, congratulations! You've now learned the main concepts for this week:
+  * How JavaScript code is built and loaded by a web browser
+  * How we use JavaScript to manipulate the page content and handle user interaction
+  * How we use JavaScript to make HTTP requests without reloading the page
+  * How we can keep a minimal code structure for separation of concerns on a client-side JS app
+
+If you have the time, feel free to backtrack with your pair and re-work on the challenge from the start, to consolidate what you've learned, perhaps making some improvements or using a slightly different approach.
+
+You can also add some CSS to make your app look nicer (see below) or/and work on [some of the post-challenge extension exercises to go further](./20_deleting_note.ed.md).
+
+---
 
 Let's take a break from JavaScript and spend a bit of time making our Notes app
 look a bit more appealing. We can do it using some CSS on the web page.

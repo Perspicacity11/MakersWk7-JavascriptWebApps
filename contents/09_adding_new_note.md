@@ -51,6 +51,7 @@ JavaScript.
 
 ## Troubleshooting common problems
 
+* If, when running the test, you're getting an error such as `document is not defined` or `Cannot read property 'appendChild' of null` — make sure you've setup the test like in the provided exemplar.
 * If the number of elements returned by `document.querySelectorAll` is still
   zero after implementing the new method — did you make sure to set the HTML
   class `note` on the new elements?

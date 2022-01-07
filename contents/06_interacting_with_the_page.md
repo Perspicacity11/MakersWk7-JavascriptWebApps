@@ -63,7 +63,7 @@ directory):
 
 ### Troubleshooting common problems
 
- — Keep in mind `document.querySelector` will return a single element, whereas
+ * Keep in mind `document.querySelector` will return a single element, whereas
  `document.querySelectorAll` returns an **array of elements**.
 
 ## A short note about HTML id and class and their selectors

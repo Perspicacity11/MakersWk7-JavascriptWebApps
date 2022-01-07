@@ -21,6 +21,10 @@ const inputEl = document.querySelector('#username-input');
 // We can access the current input value
 // (what the user typed in) with .value
 console.log(inputEl.value)
+
+// We can also set the input's value
+// (useful in tests, for example)
+inputEl.value = 'Some text in there'
 ```
 
 ## Exercise - customising the message
