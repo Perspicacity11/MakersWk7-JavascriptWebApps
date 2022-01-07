@@ -44,6 +44,8 @@ build`.
       `organization.avatar_url`). You'll have to research how we can dynamically
       set the HTML image's source URL with JavaScript.
 
+Here's the result you should get when using the page after making the changes:
+
 ![Fetching github data](./resources/fetch-2.gif)
 
 ## About the JSON format
