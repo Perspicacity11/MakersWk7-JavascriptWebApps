@@ -13,7 +13,7 @@ elements have the HTML class `note`, so we know which ones to remove from the
 page. To complete this task, you'll have to research how to remove all elements
 having the same class.
 
-1. In the test file `messageView.test.js`, add a new test case for
+1. In the test file `notesView.test.js`, add a new test case for
    `displayNotes` that verifies that, when that method is called **twice**,
    there should still be the right number of notes from the model on the page.
 
@@ -82,6 +82,18 @@ You should now get the following result when adding a new note:
 
 ![Typing in a new note](./resources/new-note-input-3.gif)
 
+## Diagramming the View-Model interaction
+
+Once again, you're encouraged to make your own diagrams to validate your understanding — but here's a basic one representing the interactions between the model and view class, and the web page:
+
+![](./resources/add-note-model-view-interaction.png)
+
+So far, the only action the user can do is to add a new note (and do it more than one time), but if we extend the logic to allow other user actions, you'll notice there is a pattern that appears:
+ * The Model holds the program state, or data (it is also what we would call the "source of truth")
+ * The View listens to user actions on the page, and updates the page to reflect the Model's data
+ * When something happens, the View updates the Model accordingly, and reflects the new data on the page again
+
+This pattern is very common in web applications, and used (to some extent) by some popular frameworks as well.
 ## Saving state
 
 You'll notice that, if we reload the page, we'll loose our list of notes — this

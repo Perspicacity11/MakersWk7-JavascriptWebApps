@@ -1,5 +1,9 @@
 # Creating a new note
 
+## Objectives
+
+ * Use `fetch` to make a POST HTTP request
+
 In the previous section, we've updates the notes app so it loads the notes from the
 backend. 
 
@@ -46,7 +50,7 @@ browser:
 This was a lot! Again, taking the time to diagram your understanding of what's
 happening can help a lot.
 
-[Next Challenge](19_making_it_look_nice.md)
+[Next Challenge](19_handling_errors.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

@@ -8,7 +8,7 @@ You made it this far, congratulations! You've now learned the main concepts for 
 
 If you have the time, feel free to backtrack with your pair and re-work on the challenge from the start, to consolidate what you've learned, perhaps making some improvements or using a slightly different approach.
 
-You can also add some CSS to make your app look nicer (see below) or/and work on [some of the post-challenge extension exercises to go further](./20_deleting_note.ed.md).
+You can also add some CSS to make your app look nicer (see below) or/and work on [some of the post-challenge extension exercises to go further](./21_deleting_note.ed.md).
 
 ---
 
@@ -69,14 +69,14 @@ button {
 * [3 ways to add CSS to your web
   page](https://dev.to/amaan56/3-ways-to-add-css-to-your-html-web-page-3k8j)
 
-[Next Challenge](20_deleting_note.md)
+[Next Challenge](21_deleting_note.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/19_making_it_look_nice.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/19_making_it_look_nice.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/19_making_it_look_nice.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/19_making_it_look_nice.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/19_making_it_look_nice.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/20_making_it_look_nice.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/20_making_it_look_nice.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/20_making_it_look_nice.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/20_making_it_look_nice.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/20_making_it_look_nice.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

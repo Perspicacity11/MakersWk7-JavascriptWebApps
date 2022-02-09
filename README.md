@@ -36,8 +36,9 @@ exemplar](./resources/counter-app-example)
 16. [Using the notes backend](./contents/16_connecting_to_server.md).
 17. [Fetching the list of notes](./contents/17_fetch_notes_from_backend.md).
 18. [Creating a new note on the backend](./contents/18_creating_new_note_server.md).
-19. [Making it look nice](./contents/19_making_it_look_nice.md).
-20. [Post challenge extension](./contents/20_deleting_note.md).
+19. [Handling network errors](./contents/19_handling_errors.md).
+20. [Making it look nice](./contents/20_making_it_look_nice.md).
+21. [Post challenge extension](./contents/21_deleting_note.md).
 
 ## End of unit challenge
 

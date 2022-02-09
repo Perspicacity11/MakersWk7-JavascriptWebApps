@@ -41,10 +41,17 @@ otherwise your changes will have no effect on the page.
   ```
 </details>
 
+## Diagram
+
+Here's a diagram representing the relationship between the two classes we have so far (the model and view classes), and how it impacts what the user sees on the page.
+
+![](./resources/diagram-adding-new-note-1.png)
+
 In the last exercises, we've seen how we can dynamically update the page content
 to display the state of our program. In the next section, we'll see how we can
 also react to user interaction, to allow the web page user to modify the program
 state.
+
 
 [Next Challenge](11_user_interaction.md)
 
