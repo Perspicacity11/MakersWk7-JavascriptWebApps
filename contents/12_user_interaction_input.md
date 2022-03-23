@@ -29,16 +29,20 @@ inputEl.value = 'Some text in there'
 
 ## Exercise - customising the message
 
+We're now going to update our program (in the `example-3` directory) so it lets us customise the message that is 
+shown when clicking the button.
+
 ### Questions
 
-1. Let's first add a text input on the web page:
+1. Let's first add a text input to the web page:
 ```html
 <input type="text" id="message-input" />
 ```
-
-2. Modify the first test in `messageView.test.js` so it sets the HTML input's
-   `value` to a message of your choice, before clicking on the "show" button.
-   The content of the `div#message` should be equal to this message.
+2. Modify the first test in `messageView.test.js` so that before clicking on the
+   "show" button, it sets the HTML input's
+   `value` to a message of your choice. This stands in for a user entering the
+   message themselves. Assert that the text content of `div#message` is equal to
+   this message.
 3. Modify the code of the `MessageView` class so this test passes.
 4. Reload the web page in the browser. You should be able to type in a message,
    and click the button to see this message appear.
@@ -49,6 +53,7 @@ inputEl.value = 'Some text in there'
 
  * Make sure you get the `.value` of the text input element *after* the click
    happened, otherwise it might be empty.
+ * Make sure that you're checking the `div`'s `textContent` in your test.
 
 ### (Again) Separation of concerns
 

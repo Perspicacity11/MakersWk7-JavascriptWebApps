@@ -1,9 +1,9 @@
 # Showing notes on the page
 
 In the previous section, we've test-driven the `NotesView` class that takes care
-of creating new elements on the page for each notes in the model. In this
-section, we'll use this class in the main file so it works when opening the web
-page in the browser.
+of creating new elements on the page for each note in the model. In this
+section, we'll use this class in the main file so that it works when opening the
+web page in the browser.
 
 ## Exercise
 
@@ -13,8 +13,8 @@ otherwise your changes will have no effect on the page.
 ### Questions
 
 1. In the main file:
-    * Setup the `NotesView` like in our test, injecting the `model` into it.
-    * Add a new note `'This is an example note'` to the model.
+    * Create a model and add a new note with the contents `'This is an example note'`.
+    * Setup an instance of `NotesView` like in our test, injecting our model into it.
     * Call the `displayNotes` method.
 2. Refresh or re-open the HTML page. You should see the note `This is an example
    note` displayed on the page.

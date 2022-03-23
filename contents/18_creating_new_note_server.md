@@ -34,14 +34,16 @@ request with JSON data using `fetch`](https://developer.mozilla.org/en-US/docs/W
 
 1. Test-drive a new method `createNote` on the `NotesApi` class. This method
    should make a `POST` request to the notes backend to create a new note.
-2. Update the code in the `NotesView` class so that new method is called when
-   the user saves a new note using the form.
+2. Update the code in the `NotesView` class so that the new method is called when
+   the user submits the form
+3. Make sure the view is "refreshed" with the new note, by calling `displayNotes()` again
 
 After completing the exercise, you should be able to do the following in the
 browser:
  * type in and submit a new note.
- * reload the page and see that new note being loaded on the page.
- * you can also check the `POST` requests made in the console's Network tab.
+ * see that new note being showed on the page.
+* you can also check the `POST` request to `/notes` logged in the console's Network tab.
+ * if you refresh the whole page, that new note should also be loaded with the original ones - it means it's been saved correctly.
 
 ![](./resources/notes-fetch-2.gif)
 

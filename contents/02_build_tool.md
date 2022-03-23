@@ -21,7 +21,7 @@ $ npm install -g esbuild
 
 ## Exercise
 
-**Using the same project directory** than in the previous section, we'll use
+**In the same project directory** than for the previous section (`example-1`), we'll use
 `esbuild` to "bundle" our main source file `index.js` into a new file
 `bundle.js` — we'll also refer to this file as the **bundle file** (nothing to
 do with Ruby's `bundle` though!).

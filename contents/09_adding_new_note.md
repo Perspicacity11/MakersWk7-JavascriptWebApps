@@ -4,8 +4,7 @@ In the previous sections we've learned, with some examples:
   * how to modify the contents of the webpage using JavaScript code
   * how to write a JavaScript test that verifies the expected webpage content.
 
-In this section, you'll **apply this new knowledge** continuing the work on the
-notes app (started in sections 4 and 5).
+In this section, you'll **apply this new knowledge** continuing the work in the `notes-app` project directory (started in sections 4 and 5).
 
 We're now going to test-drive a new class `NotesView` which will be responsible to
 reflect the model's data (the list of notes) on the page (by dynamically
@@ -40,7 +39,7 @@ JavaScript.
 
 ### Questions
 
-1. Create a new test file `notesView.test.js` using the same scaffolding than in
+1. Create a new test file `notesView.test.js` using the same pattern than in
    the previous section.
 2. Write a test that:
     * create a new instance of `NotesModel` and adds two notes to it.

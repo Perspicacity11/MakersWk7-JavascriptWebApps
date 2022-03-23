@@ -1,30 +1,34 @@
 # Let the user add a new note
 
-For this section **we'll go back to our Notes app project.**
+For this section **we'll go back to our Notes app project** — in the `notes-app` directory.
 
 In the previous section you've learned how to:
  * handle a user interaction event.
  * read an input value.
  * modify the content of the page in reaction to user interaction.
 
-You'll now apply these new learnings to make a new addition to the notes app, so **the
-user can add a new note on the page by clicking on a button**.
+You'll now apply these skills to add some functionality to the notes app, so 
+that **the user can add a new note on the page by clicking on a button**.
 
-We'll test-drive changes to the `NotesView` class so it handles user interaction and saves
-a new note to the model, before refreshing the list of notes. You can refer to the
-previous sections and exercises to help you through this new task.
+We'll test-drive changes to the `NotesView` class so that it will:
+ * handle user interaction
+ * save a new note to the model
+ * display the updated list of notes
+ 
+You can refer to the previous sections and exercises to help you through this
+task.
 
 ## Exercise - adding a note
 
 You'll need to:
- * add a new text input and button on the web page
- * test-drive and implement the JS code that allows the user to input a new note title,
+ * Add a new text input and button to the web page.
+ * Test-drive and implement the JS code that allows the user to input a new note title,
    click the button, and see the new note displayed on the page.
     * you should set an event listener in the `NotesView` constructor.
     * the model's `addNote` method should be called to save the new note on the model.
-    * you should use the `displayNotes` method to reflect the changes on the page.
+    * you should use the `displayNotes` method to reflect these changes on the page.
 
-Below is an example result of what you should have when using the web page:
+Below is an example result of what you should see when using the web page:
 
 ![Typing in a new note](./resources/new-note-input-1.gif)
 
@@ -49,7 +53,7 @@ Below is an example result of what you should have when using the web page:
 
 
   2. Write a new test in `notesView.test.js` which:
-      * setup the model and view instances
+      * sets up the model and view instances
       * sets the value of the text input to `'This is a new test note'`
       * clicks the submit button
       * then asserts there is a new note element on the page with the contents `'This is a

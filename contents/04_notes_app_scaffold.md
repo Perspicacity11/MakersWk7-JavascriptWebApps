@@ -5,13 +5,13 @@ Let's go over what you've learned in the previous sections:
  * How this bundle file is loaded by the HTML page.
  * How to log messages and variables printed using `console.log`.
 
-You will now **apply what you've learned** to create the scaffold directory of
+You will now **apply what you've learned** to create the project directory of
 the web application you'll build for the rest of this module, a small
 **notes-taking app.**
 
 To complete this first task you'll need to:
  1. Initialise a new project directory called `notes-app`, from the same
-    scaffolding directory used in the first section [(you can download it again
+    template directory that was used in the first section [(you can download it again
     here if you need)](../resources/example-1.zip).
  2. Update the contents of `index.html` so it contains the following HTML code:
  ```html
@@ -35,6 +35,9 @@ To complete this first task you'll need to:
  6. Open the HTML page with your browser, and verify the message is correctly
     printed in the developer console.
 
+### Troubleshooting
+
+ * If running `npm run build` yields an error `missing script: build`, make sure you've configured your file `package.json`, as [described here in the previous section](./03_build_tool_2.md#how-does-it-work)
 
 [Next Challenge](05_test_driving_notes_class.md)
 

@@ -20,7 +20,7 @@ You can check how it is being used in the file `githubApi.test.js`.
 
 ## Exercise
 
-You'll now test-drive and implement a new class `NotesApi`. This class should
+Back to the `notes-app` directory. You'll now test-drive and implement a new class `NotesApi`. This class should
 have one method, `loadNotes`, that uses `fetch` to request the list of notes
 from the backend.
 

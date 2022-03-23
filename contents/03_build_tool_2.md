@@ -26,7 +26,7 @@ const myFunction = require('./myFunction');
 
 ## Exercise
 
-**Using the same project directory** than in the previous section, you will:
+**In the same project directory** than in the previous section (`example-1`), you will:
  * Define functions into new JS files and use them from the main file.
  * Run the build process to compile everything into a single bundle file.
 

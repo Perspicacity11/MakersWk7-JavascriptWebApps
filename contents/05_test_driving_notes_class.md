@@ -125,7 +125,7 @@ too into the bundle file, and loaded by the web page.
 
 ---
 
-We now have a project scaffold for our notes app, with a simple model class. We'll come
+We now have a project directory setup for our notes app, with a simple model class. We'll come
 back to it — but first, let's learn how to interact with the web page using JavaScript.
 
 [Next Challenge](06_interacting_with_the_page.md)

@@ -9,10 +9,10 @@ In this section, you will **discover with an example** how we can use JavaScript
 code to make network HTTP requests to a remote server, this way we can call
 remote APIs to fetch, create or update data.
 
-## Downloading the exercise scaffold
+## Downloading the exercise directory
 
-You'll need to download [the last provided exercise scaffold for this
-section](../resources/example-4.zip). Unzip this in your projects directory and
+You'll need to download [the last provided exercise directory for this
+section](../resources/example-4.zip). Unzip this in a new directory `example-4` and
 open it in your code editor. Run the usual setup with `npm install` and `npm run
 build`.
 
@@ -22,7 +22,8 @@ build`.
    familiar with — a model class which holds data, and a view which uses event
    listeners.
 3. Inside the code for the `GithubApi` class (`githubApi.js`), you'll notice
-   something new — the `fetch` function.
+   something new — the `fetch` function. Also note how the `callback` argument
+   is being used.
 4. In your browser, open the HTML page, type in a Github repository name (such
    as 'sinatra/sinatra'), then click the button. You should see some information
    about this repository displayed in the developer console.
@@ -31,15 +32,17 @@ build`.
 
 ## Exercise - displaying the info on the page
 
-1. So far, the code only prints the repository data in the console. Add code to
-   the `GithubView` class so it also calls `display()` — this method should:
-    * sets the `full_name` property of the repo data to the HTML element
-      `#repo-name`.
-    * sets the `description` property of the repo data to the HTML element
-      `#repo-description`.
+1. So far, the code only prints the repository data to the console. Add code to
+   the `GithubView` class so that it also calls the `display` method.
+   
+2. Update the display method so that it will:
+    * Set the content of the `#repo-name` element to equal the value of the
+      `full_name` property from the repo data.
+    * Set the content of the `#repo-description` element to equal the value of the 
+      `description` property from the repo data.
 
-2. We also want to display the repo's profile picture:
-    * Add a new element `<img>` on the page, and add the required JS code so it
+3. We also want to display the repo's profile picture:
+    * Add a new element `<img>` on the page, and add JS code so that it
       displays the image (the image URL can be found under the property
       `organization.avatar_url`). You'll have to research how we can dynamically
       set the HTML image's source URL with JavaScript.
@@ -71,8 +74,8 @@ which is why it's simple to decode into a JS object, which is exactly what this
 part of the code is doing:
 ```js
 fetch('https://api.github.com/repos/' + repoName)
-  .then(response => response.json()) // 1. convert JSON to JS object
-  .then(data => {
+  .then((response) => response.json()) // 1. convert JSON to JS object
+  .then((data) => {
     // 2. `data` is now a full JS object, so we can access its properties  
     callback(data)
   });
@@ -80,7 +83,7 @@ fetch('https://api.github.com/repos/' + repoName)
 
 The function `fetch` and the JSON format can also be used to *send* HTTP request
 data to the remote server (for example, `POST` requests) — we'll learn about
-this in a few moments.
+this in a later step.
 
 ## Diagram
 
@@ -91,16 +94,16 @@ request data from Github's API, so we can modify the page to display it.
 
 ## Inspecting the request with the developer tools
 
-You might have previously used the [Developer console's
-Network](https://developer.chrome.com/docs/devtools/network/) tab to inspect
+You might have previously used the [developer console's
+_Network_](https://developer.chrome.com/docs/devtools/network/) tab to inspect
 HTTP requests (and responses) sent (and received) by the browser — since `fetch`
-sends HTTP requests, we can also inspect it using the same tool. Head to the
+sends HTTP requests, we can also inspect them using the same tool. Head to the
 `Network` tab of the console and interact with the page again to display a
 repo's information:
 
 ![Inspecting with the network tab](./resources/fetch-3.gif)
 
-This can help us debug HTTP requests made by `fetch` (e.g HTTP method, headers,
+This can help us to debug HTTP requests made by `fetch` (e.g HTTP method, headers,
 etc).
 
 ## Additional resources

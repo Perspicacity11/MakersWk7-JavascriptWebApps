@@ -2,14 +2,14 @@
 
 ## Objectives
 
- * Write a test to check the web page updates.
+ * Write a test to check the updates to the web page.
 
 In the previous section, we've learned how to modify dynamically the elements on
 the page. But how we do test that we're doing the right changes, and that the
 page is looking like it should?
 
-We can that, once again, with Jest. You may now have a look at the file
-`view.test.js` in the provided exercise directory:
+We can do that, once again, with Jest. We've been ignoring it up until now, but
+have a look at `view.test.js` in the provided exercise directory:
 
 ```js
 /**
@@ -33,25 +33,32 @@ describe('Page view', () => {
 (You may run `jest` to verify that this test passes correctly, before moving on)
 
 There's a lot going on in this file. Let's break it down:
- * we set `document.body.innerHTML` to have the same content of the "real" web
-   page (that is because Jest "mocks" the HTML content internally).
- * in the test, we use `document.querySelectorAll` to get the list of all
-   paragraph `<p>` elements — like you've done manually in the previous
-   exercise.
- * we assert there should be **2 paragraphs** in total.
+* There is [a JSDoc comment](https://jsdoc.app/about-getting-started.html) at
+  the top of the file. This tells Jest that the code we are testing is
+  intended to be run in a browser, even though the tests themselves are running
+  with node.
+* We `require` our View class, as well as Node's built-in `fs` module, which
+  lets us read non-JavaScript files.
+* We set `document.body.innerHTML` to have the same content of the "real" web
+  page (that is because Jest "mocks" the HTML content internally).
+* We use `document.querySelectorAll` to get the list of all
+  paragraph `<p>` elements — like you've done manually in the previous
+  exercise.
+* We assert that there should be **2 paragraphs** in total.
 
 ## Exercise - testing the `addParagraph` method
 
 ### Questions
 
-1. Add a test covering the method `addParagraph` created in the previous
-   section. This test should call the new method and then check that there are
-   **three** paragraphs in the document.
+1. Add a test for the `addParagraph` method we created in the previous
+   section. The test should call `addParagraph` and then check that there are
+   now **three** paragraphs in the document.
 
 ### Troubleshooting common problems
 
- * Make sure you first call `view.addParagraph()` in your test **before**
-   asserting the number of paragraphs. 
+* Use the existing test as a template.
+* Make sure you first call `view.addParagraph()` in your test **before**
+  asserting the number of paragraphs.
 
 
 

@@ -4,28 +4,31 @@
 
  * Use JavaScript to dynamically add a new element on the page.
 
-In the previous section, we've seen how we can *refer to* existing elements on
-the web page with JavaScript variables. In this section, we'll learn how we can
-manipulate these variables and their properties to modify the page content.
+In the previous section, we've seen how we can use document queries to access
+and modify elements on a web page. In this section, we'll build on this by
+learning how to add new elements to the page.
 
 ## Exercise - adding content
 
-This exercise builds on the previous one, so you can start where you left off.
+This exercise builds on the previous one, so you can start where you left off, in the directory `example-2`.
 It will require you to do some research on how to
- * [append a new element on the
+ * [append a new element to the
    page](https://developer.mozilla.org/en-US/docs/Web/API/Element/append#appending_an_element)
    using `document.createElement` and the `.append()` method.
 
 ### Questions
 
-**You should not modify the HTML code directly**. Inside the `View` class:
+**You should not change the HTML file contents; you'll use JS to dynamically**
+**change the page**.
 
-1. Implement a new method `addParagraph` — this method should *dynamically create a
+Work through the following steps by updating the `View` class in `view.js`:
+
+1. Implement a new method `addParagraph` on `View` — this method should *dynamically create a
    new `p` element* and store it in a variable.
 2. *Set this new element's content* to the string `'This paragraph has been
    dynamically added by JavaScript!` (or something else).
 3. *Append the element* to the main container element.
-4. In the main file, call this new method on the existing `View` instance.
+4. In the main file, (`index.js`) call this new method on the existing `View` instance.
 
 When opening the HTML page, you should now see this third paragraph being added
 after the two other ones.
@@ -38,7 +41,7 @@ You've noticed that we kept all the code using `document.querySelector` and
 other DOM methods (everything that modifies the page content) inside the `View`
 class. This is an example of separation of concerns. Like in other tech stacks,
 it's important that we keep our code clean and well designed when working with
-JavaScript and the web. 
+JavaScript and the web.
 
 [Next Challenge](08_testing_page_content.md)
 

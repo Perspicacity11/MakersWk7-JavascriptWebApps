@@ -1,6 +1,6 @@
 # Fixing the notes refresh
 
-In the previous section, we've implemented code so the user can type in a new
+In the previous section, we implemented code so the user can type in a new
 note and submit it, and refresh the list of notes on the page.
 
 However, we also need to "clear" the list of note elements that were *already*
@@ -14,7 +14,7 @@ page. To complete this task, you'll have to research how to remove all elements
 having the same class.
 
 1. In the test file `notesView.test.js`, add a new test case for
-   `displayNotes` that verifies that, when that method is called **twice**,
+  which verifies that when `displayNotes` is called **twice**,
    there should still be the right number of notes from the model on the page.
 
 2. Watch this test fail, and update now the code of the `displayNotes` method to
