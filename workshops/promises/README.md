@@ -1,177 +1,130 @@
-# Asynchronous JS: Promises
+# Using `fetch` and Promises
 
-<!-- OMITTED -->
+## Learning goals
+ * Learn how to make a request using `fetch`.
+ * Learn how to use a Promise to execute code "later" with `.then()`.
+ * Learn how to use `await` to make our code "wait" for the promise value.
 
-## Learning objectives
- 
- * Explain the behaviour of promises and how they can be used for asynchronous operations
- * Implement and use simple promises
+## Setup
 
-## Intro
+Make sure the repo is cloned to your machine first.
 
-Let's consider the following JS code:
-
-```js
-let posts = [];
-
-// Simulates a delay of 1sec, adds the post and calls back onComplete
-const addPost = (title, onComplete) {
-  setTimeout(() => {
-    posts.push(title);
-    onComplete()
-  }, 1000);
-}
-
-// Simulates a delay of 1sec, and calls back onComplete with the list of posts
-const getPosts(onComplete) {
-  setTimeout(() => {
-    onComplete(posts);
-  }, 1000);
-}
+```bash
+cd javascript-web-applications/workshops/promises/exercise
+npm install
+npm run build
 ```
 
-Those two functions simulate a delay using `setTimeout` (such a delay could happen if we were to communicate with a database, or an external service to fetch data). Thanks to the way asynchronous programming works in JS, we can use callback functions to avoid blocking the program while waiting for the data. 
-
-Now let's assume we want to, in this order:
-  1. Add a new post "Hello!"
-  2. Get back the list of posts including the new one, and print the result with `console.log`
-
-What code would we write?
+## Making a request with `fetch`
 
 ```js
-addPost('Hello!', () => {
-  getPosts(posts => {
-    console.log(posts);
+const something = fetch('https://async-workshops-api.herokuapp.com/people');
+
+console.log(something); // what is this?
+```
+
+Even though we are not creating the `Promise` value ourselves, it is created by `fetch` under the hood — and we use it to access the response when it becomes available.
+
+<details>
+  <summary>Show a working example</summary>
+
+  ```js
+  const promise = fetch('https://async-workshops-api.herokuapp.com/people');
+
+  promise.then((response) => {
+    console.log(response);
   });
-});
-```
+  ```
+</details>
 
-This gets harder to read, but also error handling becomes tricky — what if `addPost` fails? What if it works but then `getPosts` fails?
+## Modelling the process
 
-### Promises to the rescue
+[You can use network throttling in the browser developer console](https://developer.chrome.com/docs/devtools/network/reference/#throttling) to simulate a slow network connection.
 
-A promise represents a value that isn't available yet — a "future" value. It can also be the result of an operation that cannot complete immediately, but eventually will complete, or fail.
+Having a basic mental model of the Promises process is important to use them correctly — diagram the following steps in the correct order in which they happen:
 
-When a promise is created:
-  * it is initially marked as "pending"
-  * it tries to fetch the value, or to complete an operation
+ * The promise state moves to `fulfilled`.
+ * The promise is initialised.
+ * We call `fetch()`.
+ * The promise state moves to `pending`.
+ * The HTTP response is received.
+ * The callback function given to `.then()` is called.
 
-When the value is successfully (or not) fetched, or the operation has completed, or failed:
-  * the promise is marked as "resolved" (success) or "rejected" (failure)
-  * the promise *handler* is called
+## Exercise (30min)
 
-A promise handler is registered using `.then`. For example, `fetch` returns a promise, which is why you can call `.then` on its result.
+[Here's an example of how to use `fetch` to get JSON data](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-## Exercise - discussion
+(don't forget to make sure `npm run build` is running somewhere).
 
-In which of the following examples promises could be used? Explain why
+Use `fetch` to make a request to `https://async-workshops-api.herokuapp.com/people`, and when the response becomes available:
+  * display the JSON data into the console.
+  * change the content of the page to add one new `<div> element for each name in the JSON list.
 
- * Making a GET HTTP request to fetch some data
- * Making a POST HTTP request to update data
- * Calculating a sum of numbers
- * Adding an event listener to a DOM element in the browser (example: on mouse click)
- * Making a SQL request to a remote database
- * Calling a function that does heavy computation that can take a few seconds to complete
- * Updating the text of a DOM element in the browser
+You'll know it works if you reload the page and see the list of names being displayed on the page.
 
-## Exercise - a simple promise
+### Why do we need to call `.then` twice?
 
-Open the browser JS console, and try the following code:
+<details>
+  <summary>Show explanation</summary>
 
-```js
-// this will function "initialises" the promise — it does nothing for now, except printing out to the console
-const promiseInitializer = (resolve) => {
-  console.log('Initialising the promise...')
-};
+  ```js
+  const firstPromise = fetch('https://async-workshops-api.herokuapp.com/people');
 
-const myPromise = new Promise(promiseInitializer);
-```
-
-1. Using the browser console, inspect `myPromise` — what is its state?
-
-Now, reload the console and try the same code, but by changing the `promiseInitializer` function so it calls `resolve`:
-
-```js
-const promiseInitializer = (resolve) => {
-  console.log('Initialising the promise...')
-  resolve();
-};
-
-const myPromise = new Promise(promiseInitializer);
-```
-
-2. What is the state of `myPromise` after executing this code? What conclusion can you make about the `resolve` function that is passed to the promise initialiser?
-
-Now let's make some more change to the code: 
-
-```js
-const promiseInitializer = (resolve) => {
-  console.log('Initialising the promise...')
-  resolve();
-};
-
-const myPromise = new Promise(promiseInitializer);
-
-myPromise.then(() => {
-  console.log('Promise resolved!');
-});
-```
-
-3. Run the code again and see the result — what conclusion can you make about calling the `.then` method on the promise?
-
-4. We've added a few `console.log` (five, exactly) in the previous code example:
-
-```js
-console.log();
-
-const promiseInitializer = (resolve) => {
-  console.log();
-  console.log('Initialising the promise...')
-  resolve();
-};
-
-console.log();
-
-const myPromise = new Promise(promiseInitializer);
-
-myPromise.then(() => {
-  console.log();
-
-  console.log('Promise resolved!');
-});
-
-console.log();
-```
-
-Put numbers from 1 to 5 in each `console.log` so the code prints them in the right order. If your initial guess isn't correct, try to understand why.
-
-## Exercise - from callback hell to promises
-
-Modify the function `addPost` presented at the beginning of this workshop so it uses promises instead of callbacks. After completing the exercise, you should be able to use the function like this, and should see "post added" on the terminal:
-
-```js
-addPost('Hello!')
-  .then(() => {
-    console.log('post added');
+  // The first Promise returned by `fetch` is "fulfilled" when the response is available, however its JSON data is not "ready" yet.
+  const secondPromise = firstPromise.then((response) => {
+    
+    // Because the JSON data in the response might be very large (we could stream a very long JSON document), we need to call `data.json()`, which returns another promise.
+    return response.json();
   });
-```
 
-## Stretch exercise - chaining promises
+  // `secondPromise` is the promise returned by `response.json()` - it is fulfilled when the program has finished reading the JSON data. 
+  secondPromise.then((jsonData) => {
 
-Now, modify as well the function `getPosts` so it uses promises instead of callbacks. After completing the exercise, you should be able to use the two functions like this, and should see the list of posts (including the new one) printed on the terminal:
+    // The JSON data is now available as a JavaScript object, and we can use it.
+
+    console.log(jsonData);
+
+    jsonData.forEach(item => console.log(item));
+  });
+
+
+  // It's common to write all the above more concisely this way:
+  fetch('https://async-workshops-api.herokuapp.com/people')
+    .then((response) => response.json())
+    .then((jsonData) => {
+      // ...
+    });
+
+  ```
+</details>
+
+## Using `await`
 
 ```js
-addPost('Hello!')
-  .then(() => getPosts())
-  .then(() => {
-    console.log('post added');
-  });
+const promise = await fetch('https://async-workshops-api.herokuapp.com/people');
+
+console.log(promise); // what is this?
 ```
 
-### Resources
+Using `await` in front of `fetch` allows us to directly get the result — however, this means our code now "waits" for `fetch` to receive the response.
 
-* [Promises pill](https://github.com/makersacademy/course/blob/main/pills/js_promises.md)
-* [Promises on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+## Exercise (20 min)
+
+ * Update the exercise code to use `await` for the two promises, and remove the two calls to `.then()`
+ * Check the terminal where `npm run build` is running — it's likely you got the following error: 
+ ```
+  "await" can only be used inside an "async" function
+ ```
+ * Follow the error output suggestions to add the `async` keyword, and reload the page.
+
+## Discussion
+
+ * How promises can be used to handle code that needs to be called "later".
+ * How we can use `async` and `await` to simplify the use of promises.
+
+## More resources
+
+ * [MDN - How to use Promises](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

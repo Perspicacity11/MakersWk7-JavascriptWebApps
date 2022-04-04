@@ -10,9 +10,7 @@ the web application you'll build for the rest of this module, a small
 **notes-taking app.**
 
 To complete this first task you'll need to:
- 1. Initialise a new project directory called `notes-app`, from the same
-    template directory that was used in the first section [(you can download it again
-    here if you need)](../resources/example-1.zip).
+ 1. Initialise a new project directory called `notes-app`, [following this guidance](../pills/setup_minimal_frontend_webapp.md).
  2. Update the contents of `index.html` so it contains the following HTML code:
  ```html
    <!doctype html>
