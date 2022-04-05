@@ -1,9 +1,9 @@
 # Using `fetch` and Promises
 
 ## Learning goals
- * Learn how to make a request using `fetch`.
- * Learn how to use a Promise to execute code "later" with `.then()`.
- * Learn how to use `await` to make our code "wait" for the promise value.
+ * Send an HTTP request using `fetch`.
+ * Execute code to change the page when the response is received.
+ * Use `await` to make our code "wait" for the promise value.
 
 ## Setup
 
@@ -15,7 +15,7 @@ npm install
 npm run build
 ```
 
-## Making a request with `fetch`
+## Intro - Making a request with `fetch`
 
 ```js
 const something = fetch('https://async-workshops-api.herokuapp.com/people');
@@ -23,7 +23,7 @@ const something = fetch('https://async-workshops-api.herokuapp.com/people');
 console.log(something); // what is this?
 ```
 
-Even though we are not creating the `Promise` value ourselves, it is created by `fetch` under the hood — and we use it to access the response when it becomes available.
+`fetch` sends an HTTP request to the given URL, and returns a `Promise` object. Even though we are not creating the `Promise` value ourselves, it is created by `fetch` under the hood — and we use it to access the response when it becomes available.
 
 <details>
   <summary>Show a working example</summary>
@@ -48,6 +48,7 @@ Having a basic mental model of the Promises process is important to use them cor
  * We call `fetch()`.
  * The promise state moves to `pending`.
  * The HTTP response is received.
+ * The HTTP request is sent.
  * The callback function given to `.then()` is called.
 
 ## Exercise (30min)
@@ -56,13 +57,22 @@ Having a basic mental model of the Promises process is important to use them cor
 
 (don't forget to make sure `npm run build` is running somewhere).
 
-Use `fetch` to make a request to `https://async-workshops-api.herokuapp.com/people`, and when the response becomes available:
-  * display the JSON data into the console.
-  * change the content of the page to add one new `<div>` element for each name in the JSON list.
+1. Use `fetch` to make a request to `https://async-workshops-api.herokuapp.com/people`, and when the response is received:
+      * Display the received data into the console.
+      * Change the content of the page to add one new `<div>` element for each name in the JSON list (append them to the `#container` div).
+      * You'll know it works if you reload the page and see the list of names being displayed on the page.
 
-You'll know it works if you reload the page and see the list of names being displayed on the page.
+2. Instead of fetching (and showing) the list of people straight when the page loads, **make it happen when the user clicks on the button.**
 
-### Why do we need to call `.then` twice?
+Answer the following questions as you work through the exercise:
+  * What kind of HTTP request does `fetch` send? (check in the developer console's Network tab)
+  * What happens if the request fails? How we can we handle failures?
+
+## Discussion
+
+* What type of HTTP request does `fetch` send?
+* How we can we handle failures?
+* Why do we need to call `.then` twice?
 
 <details>
   <summary>Show explanation</summary>
@@ -98,7 +108,9 @@ You'll know it works if you reload the page and see the list of names being disp
   ```
 </details>
 
-## Using `await`
+---
+
+## Part 2 - Using `await`
 
 ```js
 const promise = await fetch('https://async-workshops-api.herokuapp.com/people');
@@ -115,12 +127,13 @@ Using `await` in front of `fetch` allows us to directly get the result — howev
  ```
   "await" can only be used inside an "async" function
  ```
- * Follow the error output suggestions to add the `async` keyword, and reload the page.
+ * Follow the error output suggestions to add the [`async` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#syntax), and reload the page.
 
 ## Discussion
 
- * How promises can be used to handle code that needs to be called "later".
- * How we can use `async` and `await` to simplify the use of promises.
+ * What can you say about the behaviour of `await` and `async`?
+ * How can you use `fetch` to save the state of your web application in a robust way? (and not on the user's machine)
+ * How are promises different from callbacks?
 
 ## More resources
 
