@@ -44,7 +44,17 @@ next section):
 $ npm install
 ```
 
-Next, open the HTML file in your browser. You should see a title and two
+Next, open the HTML file in your browser:
+
+```bash
+# You can run this from your terminal,
+# or alternatively double-click on the HTML file 
+# from the file explorer (Finder, on mac).
+
+$ open index.html
+```
+
+You should see a title and two
 paragraphs.
 
 ![A simple webpage](./resources/webpage-1.png)

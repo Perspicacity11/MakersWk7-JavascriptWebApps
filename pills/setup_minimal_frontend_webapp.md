@@ -46,6 +46,11 @@ You can find a lot of HTML "boilerplate" templates online — here's one you can
 </html>
 ```
 
+Open the page in your browser:
+```bash
+open index.html
+```
+
 ### 4. Add the `build` script to `package.json`
 
 This is so we can run `npm run build` in our terminal to execute `esbuild` to bundle the code.

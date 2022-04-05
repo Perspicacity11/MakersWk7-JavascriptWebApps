@@ -29,7 +29,13 @@ How to run the tests:
 jest
 ```
 
-Open `index.html` in your browser to use the app.
+Open `index.html` in your browser to use the app:
+
+```
+open index.html
+```
+
+Alternatively, you can also double click on it from the file explorer, and it should automatically open in your web browser.
 
 ## Discovering
 

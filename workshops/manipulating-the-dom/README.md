@@ -44,6 +44,7 @@ const myElement = document.querySelector('div#my-element');
 For this exercise, you might have to research:
   * how to create a new DOM element
   * how to append an element in the DOM tree
+  * how to set the `class` for a new DOM element
 
 In pairs, write code in the `todoView.js` file to:
   * Change the second item's text to `"Renew gym membership and go to the gym!"`
@@ -90,6 +91,7 @@ In pairs, write code in the `todoView.js` file to:
 ## Going further
  * [Learn how to encapsulate this code into a "View" class.](../../pills/manipulating_dom_with_javascript.md#how-to-encapsulate-inside-a-"view"-class)
  * [Learn how to test-drive code that updates the DOM.](../../pills/manipulating_dom_with_javascript.md#how-to-test-javascript-code-that-changes-the-web-page)
+ * [Manipulating documents on MDN — this is a longer one](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
