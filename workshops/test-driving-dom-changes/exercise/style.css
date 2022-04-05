@@ -1,0 +1,13 @@
+body {
+  width: 600px;
+  margin:auto;
+}
+#todo-list {
+  margin-top: 20px;
+}
+.todo-item {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgb(198, 232, 255);
+}

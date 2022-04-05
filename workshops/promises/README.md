@@ -58,7 +58,7 @@ Having a basic mental model of the Promises process is important to use them cor
 
 Use `fetch` to make a request to `https://async-workshops-api.herokuapp.com/people`, and when the response becomes available:
   * display the JSON data into the console.
-  * change the content of the page to add one new `<div> element for each name in the JSON list.
+  * change the content of the page to add one new `<div>` element for each name in the JSON list.
 
 You'll know it works if you reload the page and see the list of names being displayed on the page.
 
