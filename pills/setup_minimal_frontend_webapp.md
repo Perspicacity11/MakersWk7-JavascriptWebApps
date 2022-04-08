@@ -92,6 +92,91 @@ git add .
 git commit -m "Project setup"
 ```
 
+## Suggested project structure
+
+There is no idiomatic project structure for JavaScript frontend projects — it will depend heavily on the team, project domain, and/or the framework (or the absence of it). 
+
+Therefore, in this module we recommend sticking to a simple enough directory structure that we'd call "flat" — keeping the nesting of directories to a minimum:
+
+```
+- my_todo_list_project
+  - todoView.js
+  - todoView.test.js
+  - todoModel.js
+  - todoModel.test.js
+  - index.js
+  - index.html
+  - package.json
+  - (other files...)
+```
+
+Something that is common enough in JS projects is to put all JavaScript files into a directory called `src/`:
+
+```
+- my_todo_list_project
+  - src/
+    - todoView.js
+    - todoView.test.js
+    - todoModel.js
+    - todoModel.test.js
+    - index.js
+  - bundle.js
+  - index.html
+  - package.json
+  - (other files...)
+```
+
+In that case, remember to update your `package.json` so `esbuild` has the right path to the `index.js` file:
+
+```json
+{
+  "name": "notes",
+  // (...)
+  "scripts": {
+    "build": "esbuild ./src/index.js --bundle  --outfile=bundle.js --watch"
+  }
+}
+```
+
+If you'd like to have a different structure with more directories, you might want to group them by "functionality", e.g have the "View" classes in a `views/` directory, for example.
+
+```
+- my_todo_list_project
+  - src/
+    - views/
+      - todoView.js
+      - todoView.test.js
+    - models/
+      - todoModel.js
+      - todoModel.test.js
+    - index.js
+  - index.html
+  - package.json
+  - (other files...)
+```
+
+We recommend keeping the test files close to the source file they test (which is a different approach to other languages and test frameworks, like Ruby/RSpec) — but if you'd like to put all your tests in a separate directory, you can also create a `__tests__` directory at the root of your project:
+
+```
+- my_todo_list_project
+  - src/
+    - views/
+      - todoView.js
+    - models/
+      - todoModel.js
+    - index.js
+  - __tests__
+    - todoView.test.js
+    - todoModel.test.js
+  - index.html
+  - package.json
+  - (other files...)
+```
+
+In case you have any other (non JavaScript) resources, such as CSS files, images, etc, they can probably be put into a different directory (usually called `assets`, `static` or `resources`, or something similar).
+
+Once again, you shouldn't too much about having the "right" structure, as it will vary between teams and projects — focus on having something consistent and that works for you, so you know where to find your files and how to require them without too much confusion.
+
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
