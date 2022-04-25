@@ -8,11 +8,19 @@
 
 <!-- OMITTED -->
 
+## What is a web "frontend" application?
+
+Remember that for a web application to work, we need two programs, usually running on two different machines:
+  * The **web server** (or "backend") is the program that receives an HTTP request, does some work (perhaps read and write to a database), and sends a response. This is what you've built before, using Sinatra or similar frameworks, following the MVC pattern. This program is meant to be deployed on a remote machine.
+  * The **client** (or "frontend") is the program that sends requests to the aforementioned server, and receives responses from it. It can be any program on any machine, but usually it will be a web browser on a computer or mobile phone. This program is meant to be run on the user's machine.
+
+This week, **you'll build JavaScript programs that run solely on the client (frontend) side**, within a web browser. This means that all the variables and state we keep in our program are kept in the web browser's memory, within the page window (or tab).
+
+## Downloading the exercise directory
+
 In this first section, you'll **discover with an example** how JavaScript can be
 executed within a web browser — rather than Node.js — and how we can get
 visibility into our code. 
-
-## Downloading the exercise directory
 
 You will first need to download [the provided files for this first
 example](../resources/example-1.zip) to work through the exercises. Unzip this

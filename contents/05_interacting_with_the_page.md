@@ -1,9 +1,10 @@
-# Interacting with the page
+# Updating the page content
 
 ## Objectives
 
- * Understand how the DOM works.
- * Use the DOM JavaScript functions to manipulate a page content.
+ * Explain what is the DOM.
+ * Use JavaScript to dynamically change the page content.
+ * Use JavaScript to dynamically add a new element on the page.
 
 <!-- OMITTED -->
 
@@ -13,11 +14,15 @@ the Document Object Model (DOM).
 
 When your browser interprets HTML, it turns the document from HTML tags into
 a tree of objects. These objects are known as the DOM, and we can interact
-with them using JavaScript. [Read more about the DOM here](https://javascript.info/dom-nodes)
+with them using JavaScript. [Read more about the DOM here](../pills/manipulating_dom_with_javascript.ed.md)
+
+## Video demonstration
+
+[Here is a video demonstration of how to use JavaScript to dynamically change the page.](https://www.youtube.com/watch?v=W4wpGM99K4A)
 
 ## Downloading the exercise directory
 
-For this step, you'll need to download and unzip [example 2](../resources/example-2.zip).
+To work through the following exercises, you'll need to download and unzip [example-2](../resources/example-2.zip).
 Once you've unzipped the folder, open it in your code editor and install the
 dependencies with `npm install`.
 
@@ -31,7 +36,7 @@ dependencies with `npm install`.
 
 The element `<div id="main-container"></div>` logged in the console is the value
 inside `this.mainContainerEl`. It represents the corresponding HTML element on 
-the page — giving us a "handle" on that element.
+the page — giving us a "reference" to that element.
 
 By manipulating this variable, we can now interact with the element that is
 displayed. We can change its content, its CSS style properties, clone it, or
@@ -72,7 +77,7 @@ directory):
  * Keep in mind `document.querySelector` will return a single element, whereas
  `document.querySelectorAll` returns a **list of elements**.
 
-## A short note about HTML id and class and their selectors
+### A short note about HTML id and class and their selectors
 
 You might know already that HTML elements can have `id` or `class` attributes.
 An `id` is unique within the page, but many elements can have the same `class`.
@@ -86,7 +91,41 @@ MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). Usually
 all CSS selectors can be used with `document.querySelector`, etc. For this
 module, you'll need only to know about the id and class selectors.
 
-In the next section, you'll learn how we can add new elements on the page.
+
+## Exercise - adding content
+
+This exercise builds on the previous one, so you can start where you left off, in the directory `example-2`.
+It will require you to do some research on how to
+ * [append a new element to the
+   page](https://developer.mozilla.org/en-US/docs/Web/API/Element/append#appending_an_element)
+   using `document.createElement` and the `.append()` method.
+
+### Questions
+
+**You should not change the HTML file contents; you'll use JS to dynamically**
+**change the page**.
+
+Work through the following steps by updating the `View` class in `view.js`:
+
+1. Implement a new method `addParagraph` on `View` — this method should *dynamically create a
+   new `p` element* and store it in a variable.
+2. *Set this new element's content* to the string `'This paragraph has been
+   dynamically added by JavaScript!` (or something else).
+3. *Append the element* to the main container element.
+4. In the main file, (`index.js`) call this new method on the existing `View` instance.
+
+When opening the HTML page, you should now see this third paragraph being added
+after the two other ones.
+
+![A third paragraph has been added](./resources/dom-append-1.png)
+
+### Separation of concerns
+
+You've noticed that we kept all the code using `document.querySelector` and
+other DOM methods (everything that modifies the page content) inside the `View`
+class. This is an example of separation of concerns. Like in other tech stacks,
+it's important that we keep our code clean and well designed when working with
+JavaScript and the web.
 
 ## Additional resources
 
@@ -96,14 +135,14 @@ In the next section, you'll learn how we can add new elements on the page.
  * [`document.querySelector` on
    MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
-[Next Challenge](07_modifying_the_page.md)
+[Next Challenge](06_testing_page_content.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_interacting_with_the_page.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_interacting_with_the_page.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_interacting_with_the_page.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_interacting_with_the_page.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/06_interacting_with_the_page.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_interacting_with_the_page.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_interacting_with_the_page.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_interacting_with_the_page.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_interacting_with_the_page.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_interacting_with_the_page.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

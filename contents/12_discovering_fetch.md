@@ -9,9 +9,11 @@ In this section, you will **discover with an example** how we can use JavaScript
 code to make network HTTP requests to a remote server, this way we can call
 remote APIs to fetch, create or update data.
 
+<!-- OMITTED -->
+
 ## Downloading the exercise directory
 
-You'll need to download [the last provided exercise directory for this
+You'll need to download [the provided exercise directory for this
 section](../resources/example-4.zip). Unzip this in a new directory `example-4` and
 open it in your code editor. Run the usual setup with `npm install` and `npm run
 build`.
@@ -85,12 +87,6 @@ The function `fetch` and the JSON format can also be used to *send* HTTP request
 data to the remote server (for example, `POST` requests) — we'll learn about
 this in a later step.
 
-## Diagram
-
-This diagram recapitulates how the previous exercise works, using `fetch` to
-request data from Github's API, so we can modify the page to display it.
-
-![Fetch diagram](./resources/fetch-diagram.png)
 
 ## Inspecting the request with the developer tools
 
@@ -111,14 +107,14 @@ etc).
  * [How to use fetch](https://javascript.info/fetch)
 
 
-[Next Challenge](16_connecting_to_server.md)
+[Next Challenge](13_connecting_to_server.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_discovering_fetch.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_discovering_fetch.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_discovering_fetch.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_discovering_fetch.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_discovering_fetch.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/12_discovering_fetch.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/12_discovering_fetch.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/12_discovering_fetch.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/12_discovering_fetch.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/12_discovering_fetch.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

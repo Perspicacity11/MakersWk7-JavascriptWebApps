@@ -72,6 +72,19 @@ This is so we can run `npm run build` in our terminal to execute `esbuild` to bu
 }
 ```
 
+When we now run `npm run build`, the following command is executed for us by NPM:
+
+```bash
+$ esbuild index.js --bundle --outfile=bundle.js --watch
+```
+
+ * `index.js` is the main file of our JavaScript program. In other words, is the
+   file that *requires* other files, but that is not required by any other.
+ * `bundle.js` is the name of the bundle file that will be loaded by the
+   browser.
+ * the `--watch` option tells esbuild to automatically regenerate the bundle
+   when we change source files.
+
 You can now run `npm run build` and it should generate the file `bundle.js` — leave the command running in a terminal somewhere, otherwise new changes made to your source files won't be watched.
 
 ### 5. Load the `bundle.js` file on the page
