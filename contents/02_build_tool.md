@@ -21,6 +21,10 @@ simple enough for us to get started without doing too much configuration.
 $ npm install -g esbuild
 ```
 
+## Demonstration
+
+Here is a [video demonstration](https://youtu.be/hMVxUOv8kOY?t=684)
+
 ## Exercise One
 
 **In the same project directory** than for the previous section (`example-1`), we'll use
@@ -43,6 +47,8 @@ You should get the following output:
    instead of `index.js`.
 4. Reload the HTML page in your browser and verify in the console **that you can
    see the same output as before.**
+
+[Solution video](https://youtu.be/hMVxUOv8kOY?t=1003)
 
 ### Troubleshooting common problems
 
@@ -94,52 +100,7 @@ const myFunction = require('./myFunction');
    should be automatically regenerated and, after refreshing the page, you
    should see a new result in the console.
 
-<details>
-  <summary>Reveal suggested walkthrough</summary>
-
-  1. Contents of `add.js`:
-  ```js
-  module.exports = (a, b) => {
-    return a + b;
-  }
-  ```
-
-  2. Contents of `multiply.js`:
-  ```js
-  module.exports = (a, b) => {
-    return a * b;
-  }
-  ```
-
-  3. Contents of `index.js`:
-  ```js
-  const add = require('./add');
-  const multiply = require('./multiply');
-
-  console.log(multiply(add(2, 2), 4));
-  ```
-
-  4. Command to run to generate the bundled file:
-  ```bash
-  $ npm run build
-  ```
-
-  5. HTML code loading the bundled file:
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Hello JavaScript</title>
-  </head>
-    <body>
-      <!-- ... -->
-      <script type="text/javascript" src="bundle.js"></script>
-    </body>
-  </html>
-  ```
-
-  6. You should see the result (16) printed in the browser console.
-</details>
+[Solution video](https://youtu.be/hMVxUOv8kOY?t=1143)
 
 ## Diagram
 

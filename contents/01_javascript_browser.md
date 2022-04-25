@@ -41,7 +41,6 @@ It does this through a `<script>` tag.
 can run and any external packages your project needs (these are like _gems_ in
 ruby). You can use `npm init -y` to create one when setting up a new project.
 
-
 ### Setup
 
 The presence of `package.json` tells us that there are dependencies to install.
@@ -67,6 +66,10 @@ paragraphs.
 
 ![A simple webpage](./resources/webpage-1.png)
 
+## Demonstration Video
+
+Here is a [video demonstration](https://www.youtube.com/watch?v=hMVxUOv8kOY) of these introduction materials. Make sure you pause in time so you can attempt the following exercise.
+
 ## Exercise
 
 To complete the exercise you'll need to:
@@ -84,6 +87,8 @@ To complete the exercise you'll need to:
    the console.
 
 ![Logging in the console](./resources/webpage-2.png)
+
+[Solution video](https://youtu.be/hMVxUOv8kOY?t=431)
 
 ### Troubleshooting common problems
 
