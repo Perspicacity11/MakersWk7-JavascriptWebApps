@@ -95,6 +95,8 @@ describe('A test for my web page', () => {
    section. The test should call `addParagraph` and then check that there are
    now **three** paragraphs in the document.
 
+[Example solution](https://www.youtube.com/watch?v=phBzCmSkPAM)
+
 ### Troubleshooting common problems
 
 * Use the template given above.
@@ -104,6 +106,8 @@ describe('A test for my web page', () => {
 
 1. **Test-drive** (using the template given above) a new method on the view class, `clearParagraphs()`. This method should remove all paragraphs from the document.
 2. **Implement** the `clearParagraphs()` method so your test passes.
+
+[Example solution](https://youtu.be/phBzCmSkPAM?t=224)
 
 
 [Next Challenge](07_adding_new_note.md)

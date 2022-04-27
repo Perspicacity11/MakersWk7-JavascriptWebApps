@@ -72,6 +72,8 @@ directory):
    in the document. Store the list in a variable, and print it to the console. You
    should get the following result: ![Screenshot](./resources/dom-selector-2.png)
 
+[Solution video](https://www.youtube.com/watch?v=S55OUdXpY4o)
+
 ### Troubleshooting common problems
 
  * Keep in mind `document.querySelector` will return a single element, whereas
@@ -118,6 +120,8 @@ When opening the HTML page, you should now see this third paragraph being added
 after the two other ones.
 
 ![A third paragraph has been added](./resources/dom-append-1.png)
+
+[Solution video](https://youtu.be/S55OUdXpY4o?t=147)
 
 ### Separation of concerns
 
