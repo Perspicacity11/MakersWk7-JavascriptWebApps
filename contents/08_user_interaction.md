@@ -55,7 +55,9 @@ available for us to listen for, everything from mouse clicks, key strokes
 and scrolling, to rotating your device, printing the page or even plugging
 in a gamepad! But for now we'll stick to clicks.
 
-<!-- OMITTED -->
+## Demonstration
+
+[Here is a video demonstration.](https://www.youtube.com/watch?v=QouSjlzRpXc)
 
 ## Exercise one
 
@@ -98,6 +100,8 @@ container. Give this `div` element an `id` of `message`, and set its content to 
 message displayed by JavaScript`.
     * You'll have to research how to set the HTML ID for this element.
 
+[Example solution](https://youtu.be/QouSjlzRpXc?t=375)
+
 ## Exercise two - hiding the message
 
 You'll now test-drive a second button to **hide the message when
@@ -118,6 +122,8 @@ the user clicks on it.** For this exercise you'll need to research:
    buttons to show or remove the message.
 
 ![Showing and hiding the message](./resources/click-button.gif)
+
+[Example solution](https://youtu.be/QouSjlzRpXc?t=753)
 
 In the next section, we'll see how we can handle user input in form elements,
 such as text inputs, with JavaScript code.

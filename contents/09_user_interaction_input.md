@@ -51,6 +51,8 @@ shown when clicking the button.
 
 ![Typing in the message](./resources/click-button-2.gif)
 
+[Example solution](https://www.youtube.com/watch?v=WfLCR_Y83sM)
+
 ### Troubleshooting common problems
 
  * Make sure you get the `.value` of the text input element *after* the click
