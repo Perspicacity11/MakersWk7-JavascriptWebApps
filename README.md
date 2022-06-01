@@ -1,4 +1,4 @@
-# Javascript Web Frontend Applications
+# Javascript and the Web
 
 _Coaching this? Read the coach guidance
 [here.](https://github.com/makersacademy/slug/blob/main/materials/universe/language_intros/challenges/javascript_web_applications/COACH_GUIDANCE.x.md)_
@@ -8,50 +8,43 @@ You've now learned how to use Javascript to build programs running in `node`. Ho
 ## Learning objectives
 
 * Test-drive a simple Javascript program running in a web browser, using modern JS build tools.
-* Use the DOM API to manipulate the web page structure and content.
-* Use `fetch` to send HTTP requests to a remote server.
+* Use the DOM API to build a web user interface for this program.
+* Build a single-page web application fetching and updating remote data using JS.
 
-## Sequence
+## Start here
 
-Work through these different steps in sequence.
-
-### Start here
-
-[Explore the counter web application
+1. [Explore the counter web application
 exemplar](./resources/counter-app-example)
 
-### Phase One: Setting up a project
+## Pairing sequence
 
 1. [Javascript and the browser](./contents/01_javascript_browser.md).
-2. [Using a build tool](./contents/02_build_tool.md).
-3. [Setting up the notes app](./contents/03_notes_app_scaffold.md).
-4. [Test-driving the `NotesModel` class](./contents/04_test_driving_notes_class.md).
+2. [Using a build tool I](./contents/02_build_tool.md).
+3. [Using a build tool II](./contents/03_build_tool_2.md).
+4. [Scaffolding the notes app](./contents/04_notes_app_scaffold.md).
+5. [Test-driving the model class](./contents/05_test_driving_notes_class.md).
+6. [Interacting with the page I](./contents/06_interacting_with_the_page.md).
+7. [Interacting with the page II](./contents/07_modifying_the_page.md).
+8. [Interacting with the page III](./contents/08_testing_page_content.md).
+9. [Displaying a new note on the page I](./contents/09_adding_new_note.md).
+10. [Displaying a new note on the page II](./contents/10_adding_new_note_2.md).
+11. [Handling user interaction I](./contents/11_user_interaction.md).
+12. [Handling user interaction II](./contents/12_user_interaction_input.md).
+13. [Letting the user add a note I](./contents/13_adding_a_note_ui.md).
+14. [Letting the user add a note II](./contents/14_fixing_list_refresh.md).
+15. [Discovering `fetch`](./contents/15_discovering_fetch.md).
+16. [Using the notes backend](./contents/16_connecting_to_server.md).
+17. [Fetching the list of notes](./contents/17_fetch_notes_from_backend.md).
+18. [Creating a new note on the backend](./contents/18_creating_new_note_server.md).
+19. [Handling network errors](./contents/19_handling_errors.md).
+20. [Making it look nice](./contents/20_making_it_look_nice.md).
+21. [Post challenge extension](./contents/21_deleting_note.md).
 
-### Phase Two: Make the page interactive
-5. [Interacting with the page](./contents/05_interacting_with_the_page.md).
-6. [Testing DOM updates with Jest](./contents/06_testing_page_content.md).
-7. [Test-driving the `NotesView` class](./contents/07_adding_new_note.md).
-8. [Handling user interaction](./contents/08_user_interaction.md).
-9. [Handling forms input](./contents/09_user_interaction_input.md).
-10. [Test-driving the form to add a new note](./contents/10_adding_a_note_ui.md).
-11. [Fixing the notes list refresh](./contents/11_fixing_list_refresh.md).
+## End of unit challenge
 
-### Phase Three: Communicate with remote APIs
-12. [Discovering `fetch`](./contents/12_discovering_fetch.md).
-13. [Using the notes backend](./contents/13_connecting_to_server.md).
-14. [Test-driving an API class](./contents/14_fetch_notes_from_backend.md).
-15. [Creating a new note on the server](./contents/15_creating_new_note_server.md).
-16. [Working with Promises](./contents/16_promises.md)
-17. [Handling network errors](./contents/17_handling_errors.md).
-18. [Making it look nice](./contents/18_making_it_look_nice.md).
-19. [Post challenge extension](./contents/19_deleting_note.md).
-
-### Phase Four: Solo Challenge
-
-Work on either of:
-
+You may work on either of:
+* [News challenge](https://github.com/makersacademy/news-summary-challenge)
 * [Chitter frontend challenge](https://github.com/makersacademy/frontend-api-challenge)
-* [News frontend challenge](https://github.com/makersacademy/news-summary-challenge)
 
 ## Resources and practicals
 
