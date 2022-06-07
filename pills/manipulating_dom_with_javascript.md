@@ -65,10 +65,10 @@ document.querySelector('h1').innerText = 'This is a new title';
 // 3. Other things that we could do with the element:
 
 // a. Hide it
-titleElement.css.display = 'none';
+titleElement.style.display = 'none';
 
 // b. Show it again
-titleElement.css.display = 'block';
+titleElement.style.display = 'block';
 
 // c. Set its HTML id (if you don't know what this is, read the section about HTML IDs below)
 titleElement.id = 'introduction';

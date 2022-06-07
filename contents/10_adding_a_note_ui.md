@@ -1,12 +1,11 @@
-# Let the user add a new note
+# Test-driving the form to add a new note
 
-For this section **we'll go back to our Notes app project** — in the `notes-app` directory.
+## Objectives
 
-In the previous section you've learned how to:
- * handle a user interaction event.
- * read an input value.
- * modify the content of the page in reaction to user interaction.
+ * Use JavaScript to handle a click and read an input value.
+ * Modify the page in reaction to user interaction.
 
+For this challenge, **we'll go back to our Notes app project** — in the `notes-app` directory.
 You'll now apply these skills to add some functionality to the notes app, so 
 that **the user can add a new note on the page by clicking on a button**.
 
@@ -18,7 +17,7 @@ We'll test-drive changes to the `NotesView` class so that it will:
 You can refer to the previous sections and exercises to help you through this
 task.
 
-## Exercise - adding a note
+## Challenge
 
 You'll need to:
  * Add a new text input and button to the web page.
@@ -120,14 +119,14 @@ You can notice two slightly annoying bugs in our program now:
 We'll fix those two issues in the next section.
 
 
-[Next Challenge](14_fixing_list_refresh.md)
+[Next Challenge](11_fixing_list_refresh.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/13_adding_a_note_ui.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/13_adding_a_note_ui.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/13_adding_a_note_ui.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/13_adding_a_note_ui.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/13_adding_a_note_ui.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/10_adding_a_note_ui.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/10_adding_a_note_ui.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/10_adding_a_note_ui.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/10_adding_a_note_ui.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/10_adding_a_note_ui.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

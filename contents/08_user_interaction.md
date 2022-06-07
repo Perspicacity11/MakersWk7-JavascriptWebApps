@@ -55,8 +55,11 @@ available for us to listen for, everything from mouse clicks, key strokes
 and scrolling, to rotating your device, printing the page or even plugging
 in a gamepad! But for now we'll stick to clicks.
 
+## Demonstration
 
-## Exercise
+[Here is a video demonstration.](https://www.youtube.com/watch?v=QouSjlzRpXc)
+
+## Exercise one
 
 Look at the test file `messageView.test.js` in the example directory. The
 structure looks similar to the one previously encountered:
@@ -97,7 +100,9 @@ container. Give this `div` element an `id` of `message`, and set its content to 
 message displayed by JavaScript`.
     * You'll have to research how to set the HTML ID for this element.
 
-## Exercise - hiding the message
+[Example solution](https://youtu.be/QouSjlzRpXc?t=375)
+
+## Exercise two - hiding the message
 
 You'll now test-drive a second button to **hide the message when
 the user clicks on it.** For this exercise you'll need to research:
@@ -118,6 +123,8 @@ the user clicks on it.** For this exercise you'll need to research:
 
 ![Showing and hiding the message](./resources/click-button.gif)
 
+[Example solution](https://youtu.be/QouSjlzRpXc?t=753)
+
 In the next section, we'll see how we can handle user input in form elements,
 such as text inputs, with JavaScript code.
 
@@ -129,14 +136,14 @@ such as text inputs, with JavaScript code.
 ## Additional resources
  * [Events reference - MDN](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-[Next Challenge](12_user_interaction_input.md)
+[Next Challenge](09_user_interaction_input.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/11_user_interaction.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/11_user_interaction.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/11_user_interaction.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/11_user_interaction.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/11_user_interaction.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/08_user_interaction.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/08_user_interaction.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/08_user_interaction.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/08_user_interaction.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/08_user_interaction.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

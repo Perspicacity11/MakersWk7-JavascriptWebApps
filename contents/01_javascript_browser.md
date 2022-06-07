@@ -8,11 +8,19 @@
 
 <!-- OMITTED -->
 
+## What is a web "frontend" application?
+
+Remember that for a web application to work, we need two programs, usually running on two different machines:
+  * The **web server** (or "backend") is the program that receives an HTTP request, does some work (perhaps read and write to a database), and sends a response. This is what you've built before, using Sinatra or similar frameworks, following the MVC pattern. This program is meant to be deployed on a remote machine.
+  * The **client** (or "frontend") is the program that sends requests to the aforementioned server, and receives responses from it. It can be any program on any machine, but usually it will be a web browser on a computer or mobile phone. This program is meant to be run on the user's machine.
+
+This week, **you'll build JavaScript programs that run solely on the client (frontend) side**, within a web browser. This means that all the variables and state we keep in our program are kept in the web browser's memory, within the page window (or tab).
+
+## Downloading the exercise directory
+
 In this first section, you'll **discover with an example** how JavaScript can be
 executed within a web browser — rather than Node.js — and how we can get
 visibility into our code. 
-
-## Downloading the exercise directory
 
 You will first need to download [the provided files for this first
 example](../resources/example-1.zip) to work through the exercises. Unzip this
@@ -33,7 +41,6 @@ It does this through a `<script>` tag.
 can run and any external packages your project needs (these are like _gems_ in
 ruby). You can use `npm init -y` to create one when setting up a new project.
 
-
 ### Setup
 
 The presence of `package.json` tells us that there are dependencies to install.
@@ -44,10 +51,24 @@ next section):
 $ npm install
 ```
 
-Next, open the HTML file in your browser. You should see a title and two
+Next, open the HTML file in your browser:
+
+```bash
+# You can run this from your terminal,
+# or alternatively double-click on the HTML file 
+# from the file explorer (Finder, on mac).
+
+$ open index.html
+```
+
+You should see a title and two
 paragraphs.
 
 ![A simple webpage](./resources/webpage-1.png)
+
+## Demonstration Video
+
+Here is a [video demonstration](https://www.youtube.com/watch?v=hMVxUOv8kOY) of these introduction materials. Make sure you pause in time so you can attempt the following exercise.
 
 ## Exercise
 
@@ -66,6 +87,8 @@ To complete the exercise you'll need to:
    the console.
 
 ![Logging in the console](./resources/webpage-2.png)
+
+[Solution video](https://youtu.be/hMVxUOv8kOY?t=431)
 
 ### Troubleshooting common problems
 

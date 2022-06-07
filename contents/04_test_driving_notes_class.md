@@ -1,11 +1,19 @@
-# Implementing the `NotesModel` class
+# Test-driving the Model class
+
+## Objectives
+
+  * Test-drive a JavaScript "Model" class to hold the program's state.
 
 You will **use the same project directory `notes-app`** for this new task.
 
-## Exercise - test-driving the class
+## Demonstration
+
+Here is [a video demonstration](https://www.youtube.com/watch?v=YGbPa91Y5tg) of a coach test-driving a "Model" class.
+
+## Exercise one
 
 You will now implement, test-driving, a JavaScript class to hold our program data (the
-**model** class).
+**model** class). This will be similar to previous classes you've written, acting as a "wrapper" for our program's state.
 
 Here's an acceptance criteria for this class — how we want it to behave, once implemented:
 
@@ -31,7 +39,7 @@ model.getNotes(); // should now return []
 2. Write the test cases for `NotesModel` (at least three) verifying the acceptance
    criteria shown above, and test-drive the `NotesModel` class (in `notesModel.js`), one test at a time. To test arrays, prefer the use of `.toEqual()` matcher over `.toBe()`.
 
-## Exercise - including the class on the page
+## Exercise two
 
 We've now implemented the class `NotesModel` — but it is not loaded by our web page yet.
 It only exists on its own, outside of the web page. Here's a rough diagram on how things
@@ -128,14 +136,14 @@ too into the bundle file, and loaded by the web page.
 We now have a project directory setup for our notes app, with a simple model class. We'll come
 back to it — but first, let's learn how to interact with the web page using JavaScript.
 
-[Next Challenge](06_interacting_with_the_page.md)
+[Next Challenge](05_interacting_with_the_page.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_test_driving_notes_class.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_test_driving_notes_class.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_test_driving_notes_class.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_test_driving_notes_class.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/05_test_driving_notes_class.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/04_test_driving_notes_class.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/04_test_driving_notes_class.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/04_test_driving_notes_class.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/04_test_driving_notes_class.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/04_test_driving_notes_class.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

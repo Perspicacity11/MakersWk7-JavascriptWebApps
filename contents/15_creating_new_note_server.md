@@ -1,11 +1,14 @@
-# Creating a new note
+# Creating a new note on the server
 
 ## Objectives
 
  * Use `fetch` to make a POST HTTP request
+ * Test-drive the creation of a new note from user interaction.
 
-In the previous section, we've updates the notes app so it loads the notes from the
-backend. 
+## Intro
+
+In the previous section, you've created a `NotesApi` class to load the list 
+of notes from the backend server.
 
 What about adding a new note? Currently, we only call the model's
 `addNote` method. However since our state is managed by the backend, we also
@@ -27,6 +30,8 @@ This makes an HTTP request to `http://localhost:3000/notes` with:
  * a `Content-type: application/json` header (necessary to indicate we're POSTing JSON data)
  * a JSON body: `{ "content": "Remember to reflect on my progress this week!" }`
 
+<!-- OMITTED -->
+
 ## Exercise 
 
 To complete this exercise, you'll have to **research [how to send a `POST`
@@ -34,9 +39,10 @@ request with JSON data using `fetch`](https://developer.mozilla.org/en-US/docs/W
 
 1. Test-drive a new method `createNote` on the `NotesApi` class. This method
    should make a `POST` request to the notes backend to create a new note.
-2. Update the code in the `NotesView` class so that the new method is called when
-   the user submits the form
-3. Make sure the view is "refreshed" with the new note, by calling `displayNotes()` again
+
+2. We now want to update the `NotesView` class so that the new method `api.createNote()` is called when the user submits the form — test-drive this feature. Remember, here again, to mock the dependency on `NotesApi` in this test.
+
+3. Make sure the view is "refreshed" with the newly created note, by calling `displayNotes()` again.
 
 After completing the exercise, you should be able to do the following in the
 browser:
@@ -52,14 +58,14 @@ browser:
 This was a lot! Again, taking the time to diagram your understanding of what's
 happening can help a lot.
 
-[Next Challenge](19_handling_errors.md)
+[Next Challenge](16_promises.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/18_creating_new_note_server.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/18_creating_new_note_server.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/18_creating_new_note_server.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/18_creating_new_note_server.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/18_creating_new_note_server.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_creating_new_note_server.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_creating_new_note_server.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_creating_new_note_server.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_creating_new_note_server.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=contents/15_creating_new_note_server.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
