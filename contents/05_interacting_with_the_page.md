@@ -14,7 +14,7 @@ the Document Object Model (DOM).
 
 When your browser interprets HTML, it turns the document from HTML tags into
 a tree of objects. These objects are known as the DOM, and we can interact
-with them using JavaScript. [Read more about the DOM here](../pills/manipulating_dom_with_javascript.ed.md)
+with them using JavaScript. [Read more about the DOM here](../pills/manipulating_dom_with_javascript.md)
 
 ## Video demonstration
 
