@@ -42,8 +42,6 @@ exemplar](./resources/counter-app-example)
 
 ## End of unit challenge
 
-You may work on either of:
-* [News challenge](https://github.com/makersacademy/news-summary-challenge)
 * [Chitter frontend challenge](https://github.com/makersacademy/frontend-api-challenge)
 
 ## Resources and practicals
