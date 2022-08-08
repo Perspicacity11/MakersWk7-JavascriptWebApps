@@ -55,11 +55,11 @@ For example, in the HTML page from the example above, we can query the paragraph
 const titleElement = document.querySelector('h1');
 
 // 2. We can now interact with the element, e.g modify its text content
-titleElement.innerText = 'This is a new title';
+titleElement.textContent = 'This is a new title';
 
 
 // We can shorten the two lines above like this:
-document.querySelector('h1').innerText = 'This is a new title';
+document.querySelector('h1').textContent = 'This is a new title';
 
 
 // 3. Other things that we could do with the element:
@@ -157,7 +157,7 @@ Remember that the browser keeps a "tree" representation of all the elements. To 
 const newElement = document.createElement('p');
 
 // 2. Set its text content
-newElement.innerText = "Hey there, I'm new";
+newElement.textContent = "Hey there, I'm new";
 
 // 3. Append it to the body
 const body = document.querySelector('body');
@@ -183,7 +183,7 @@ We can encapsulate the logic described in this page inside a JavaScript class - 
 ```js
 class TitleView {
   display(newTitle) {
-    document.querySelector('#title').innerText = newTitle;
+    document.querySelector('#title').textContent = newTitle;
   }
 }
 ```
@@ -242,7 +242,7 @@ Below is an example of putting all of this together:
 
 class TitleView {
   display(newTitle) {
-    document.querySelector('#title').innerText = newTitle;
+    document.querySelector('#title').textContent = newTitle;
   }
 }
 
@@ -272,7 +272,7 @@ describe('Page view', () => {
     // 3. Assert - using querySelector,
     // we get the DOM element and assert its content changed
     const titleEl = document.querySelector('#title');
-    expect(titleEl.innerText).toBe('This is my new title!')
+    expect(titleEl.textContent).toBe('This is my new title!')
   });
 });
 ```
@@ -296,7 +296,7 @@ Work on these exercises from the project directory above - you can [download the
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/manipulating_dom_with_javascript.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/manipulating_dom_with_javascript.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/manipulating_dom_with_javascript.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/manipulating_dom_with_javascript.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/manipulating_dom_with_javascript.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fmanipulating_dom_with_javascript.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fmanipulating_dom_with_javascript.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fmanipulating_dom_with_javascript.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fmanipulating_dom_with_javascript.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fmanipulating_dom_with_javascript.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

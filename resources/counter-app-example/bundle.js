@@ -36,7 +36,7 @@
           });
         }
         display() {
-          document.querySelector("#counter").innerText = this.model.getCounter();
+          document.querySelector("#counter").textContent = this.model.getCounter();
         }
       };
       module.exports = CounterView2;

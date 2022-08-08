@@ -14,7 +14,7 @@ describe('Counter view', () => {
     const view = new CounterView(model);
     view.display();
 
-    expect(document.querySelector('#counter').innerText).toBe(0);
+    expect(document.querySelector('#counter').textContent).toBe(0);
   });
 
   it('displays value 2 after 2 clicks', () => {
@@ -25,6 +25,6 @@ describe('Counter view', () => {
     document.querySelector('#increment-btn').click();
     document.querySelector('#increment-btn').click();
 
-    expect(document.querySelector('#counter').innerText).toBe(2);
+    expect(document.querySelector('#counter').textContent).toBe(2);
   });
 })

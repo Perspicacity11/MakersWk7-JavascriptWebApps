@@ -5,7 +5,7 @@ class TodoView {
 
   addItem(title) {
     const d = document.createElement('div');
-    d.innerText = title;
+    d.textContent = title;
     d.className = 'todo-item'
     document.querySelector('#todo-list').appendChild(d);
   }

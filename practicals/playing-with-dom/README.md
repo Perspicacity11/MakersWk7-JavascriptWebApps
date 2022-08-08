@@ -10,7 +10,7 @@ Go to the [Wikipedia JavaScript page](https://en.wikipedia.org/wiki/JavaScript) 
 
 1. Using the "inspect element" browser function (you can right-click on the targeted element you want to inspect), find the HTML ID of the article title "JavaScript".
 2. Use `document.querySelector` to "select" the DOM element and assign its value to a JS variable.
-3. Use the `.innerText` property to replace the title content by "JavaScript is awesome".
+3. Use the `.textContent` property to replace the title content by "JavaScript is awesome".
 3. Use the `.style` property to change the font size to a big one, such as `120px`, and the colour to orange (be careful — the style properties values need to be set as strings, such as `'20px'`).
 
 You should get to a similar result, *only with typing JavaScript code in the console:*
@@ -71,7 +71,7 @@ There are a lot more ways to interact with the page and handle user interaction,
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=practicals/playing-with-dom/README.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=practicals/playing-with-dom/README.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=practicals/playing-with-dom/README.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=practicals/playing-with-dom/README.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=practicals/playing-with-dom/README.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=practicals%2Fplaying-with-dom%2FREADME.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=practicals%2Fplaying-with-dom%2FREADME.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=practicals%2Fplaying-with-dom%2FREADME.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=practicals%2Fplaying-with-dom%2FREADME.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=practicals%2Fplaying-with-dom%2FREADME.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

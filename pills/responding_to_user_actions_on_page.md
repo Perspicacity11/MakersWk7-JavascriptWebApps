@@ -104,7 +104,7 @@ class CounterView {
   // so the value is immediately displayed as soon
   // as we call `new CounterView()`
   constructor() {
-    document.querySelector('#counter').innerText = '0';
+    document.querySelector('#counter').textContent = '0';
   }
 }
 
@@ -129,15 +129,15 @@ class CounterView {
   // so the value is immediately displayed as soon
   // as we call `new CounterView()`
   constructor() {
-    document.querySelector('#counter').innerText = '0';
+    document.querySelector('#counter').textContent = '0';
     document.querySelector('#increment-button').addEventListener('click', () => {
-      const currentValue = document.querySelector('#counter').innerText;
+      const currentValue = document.querySelector('#counter').textContent;
 
-      // .innerText returns a string, so we make sure it's converted
+      // .textContent returns a string, so we make sure it's converted
       // to a number before incrementing, otherwise we'd get weird results!
       const newValue = parseInt(currentValue) + 1;
 
-      document.querySelector('#counter').innerText = String(newValue);
+      document.querySelector('#counter').textContent = String(newValue);
     });
   }
 }
@@ -240,7 +240,7 @@ describe('Counter view', () => {
     // 3. Assert - using querySelector,
     // we get the DOM element and assert its content (should be '0')
     const counterEl = document.querySelector('#counter');
-    expect(counterEl.innerText).toBe('1')
+    expect(counterEl.textContent).toBe('1')
   });
 });
 ```
@@ -303,7 +303,7 @@ const counter = new CounterView(model);
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/responding_to_user_actions_on_page.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/responding_to_user_actions_on_page.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/responding_to_user_actions_on_page.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/responding_to_user_actions_on_page.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/javascript-web-applications&prefill_File=pills/responding_to_user_actions_on_page.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fresponding_to_user_actions_on_page.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fresponding_to_user_actions_on_page.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fresponding_to_user_actions_on_page.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fresponding_to_user_actions_on_page.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fjavascript-web-applications&prefill_File=pills%2Fresponding_to_user_actions_on_page.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
