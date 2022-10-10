@@ -26,7 +26,7 @@ npm run build
 
 How to run the tests:
 ```
-jest
+npm run test
 ```
 
 Open `index.html` in your browser to use the app:

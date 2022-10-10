@@ -17,6 +17,7 @@ mkdir my-project-directory
 cd my-project-directory/
 
 npm init -y
+npm install jest-environment-jsdom
 ```
 
 ### 2. Create files
@@ -188,7 +189,7 @@ We recommend keeping the test files close to the source file they test (which is
 
 In case you have any other (non JavaScript) resources, such as CSS files, images, etc, they can probably be put into a different directory (usually called `assets`, `static` or `resources`, or something similar).
 
-Once again, you shouldn't too much about having the "right" structure, as it will vary between teams and projects — focus on having something consistent and that works for you, so you know where to find your files and how to require them without too much confusion.
+Once again, you shouldn't worry too much about having the "right" structure, as it will vary between teams and projects — focus on having something consistent and that works for you, so you know where to find your files and how to require them without too much confusion.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

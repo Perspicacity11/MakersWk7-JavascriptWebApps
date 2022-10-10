@@ -8,7 +8,7 @@ You made it this far, congratulations! You've now learned the main concepts for 
 
 If you have the time, feel free to backtrack with your pair and re-work on the challenge from the start, to consolidate what you've learned, perhaps making some improvements or using a slightly different approach.
 
-You can also add some CSS to make your app look nicer (see below) or/and work on [some of the post-challenge extension exercises to go further](./21_deleting_note.md).
+You can also add some CSS to make your app look nicer (see below) or/and work on [some of the post-challenge extension exercises to go further](./19_deleting_note.md).
 
 ---
 

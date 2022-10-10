@@ -1,7 +1,6 @@
 class CounterModel {
   constructor() {
     this.counter = 0;
-    console.log('hey');
   }
 
   getCounter() {
