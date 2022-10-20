@@ -1,7 +1,7 @@
 # Fetching the notes list from a server
 
 In the previous section, you've learned how we can use `fetch` to send an HTTP request and
-retrieve data from an API. 
+retrieve data from a remote server.
 
 You'll now use these learnings to make a new addition to the notes app, so **it loads the
 list of notes from a remote API**.
@@ -20,7 +20,7 @@ HTTP endpoints, notably:
 
  * `GET /notes` - gets the list of notes - you can access this one in your browser by
    visiting [`http://localhost:3000/notes`](http://localhost:3000/notes) (you'll notice
-   this API uses the JSON format too).
+   this API returns data the JSON format too).
  * `POST /notes` - adds a new note with a JSON body — we'll leave this one for later.
 
 ## Exercise - experimenting with `fetch` and the notes backend
@@ -30,9 +30,9 @@ HTTP endpoints, notably:
 1. On the notes app web page, open the developer console and use `fetch` to make a call to
    `http://localhost:3000/notes` and `console.log` the result data. You can use the
    previous section's `fetch` example (the one using Github's API) as a scaffolding for
-   this.
+   this new code.
 
-You should get an array of one note `['This note is coming from the server']` in the
+You should get an array containing one note `['This note is coming from the server']` in the
 developer console. Looking at the **Network** tab, you should also see your GET request to
 `/notes` logged.
 

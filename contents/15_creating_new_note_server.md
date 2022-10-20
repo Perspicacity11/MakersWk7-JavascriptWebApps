@@ -7,7 +7,7 @@
 
 ## Intro
 
-In the previous section, you've created a `NotesApi` class to load the list 
+In the previous section, you've created a `NotesClient` class to load the list 
 of notes from the backend server.
 
 What about adding a new note? Currently, we only call the model's
@@ -37,10 +37,10 @@ This makes an HTTP request to `http://localhost:3000/notes` with:
 To complete this exercise, you'll have to **research [how to send a `POST`
 request with JSON data using `fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_json_data).**
 
-1. Test-drive a new method `createNote` on the `NotesApi` class. This method
-   should make a `POST` request to the notes backend to create a new note.
+1. Test-drive a new method `createNote` on the `NotesClient` class. This method
+   should send a `POST` request to the notes backend to create a new note.
 
-2. We now want to update the `NotesView` class so that the new method `api.createNote()` is called when the user submits the form — test-drive this feature. Remember, here again, to mock the dependency on `NotesApi` in this test.
+2. We now want to update the `NotesView` class so that the new method `client.createNote` is called when the user submits the form — test-drive this feature. Remember, here again, to mock the dependency on `NotesClient` in this test.
 
 3. Make sure the view is "refreshed" with the newly created note, by calling `displayNotes()` again.
 

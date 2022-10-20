@@ -19,7 +19,7 @@ The notes backend server is still running in a terminal on your machine. Stop it
 We want to handle this error and show an error message to the user — thankfully, [we can use `.catch()` with `fetch` (since it uses JS promises under the hood) to handle errors](https://www.tjvantoll.com/2015/09/13/fetch-and-errors/).
 
 1. Test-drive a new method `displayError` on the `NotesView` class — this method should append an error message on the page, such as "Oops, something went wrong!"
-2. Modify the method `loadNotes` on the `NotesApi` class so it accepts a second argument: a callback function that will be called in case of an error making the HTTP request
+2. Modify the method `loadNotes` on the `NotesClient` class so it accepts a second argument: a callback function that will be called in case of an error making the HTTP request
 3. As shown on the [`fetch` documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), use `.catch()` to handle the case in which the request fails
 4. Use the new `displayError` method to display the error message in that case.
 
@@ -27,7 +27,7 @@ After completing the above steps, you should be able to reload the page and see 
 
 The code in your main JS file `index.js` should look like this after implementing the changes above — the `loadNotes` method now accepts **two** callback functions:
 ```js
-api.loadNotes((notes) => {
+client.loadNotes((notes) => {
   // This will be executed if notes are loaded correctly from the server
   model.setNotes(notes);
   view.displayNotes();

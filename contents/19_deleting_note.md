@@ -18,7 +18,7 @@ You'll now implement a way for the user to reset the list of notes, using this b
 
 Implement a new button `Reset all notes` that does what it says:
   * the `NotesView` class should handle the interaction with this button.
-  * the `NotesApi` should implement a `reset` method that uses `fetch` to call the reset endpoint.
+  * the `NotesClient` should implement a `reset` method that uses `fetch` to call the reset endpoint.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

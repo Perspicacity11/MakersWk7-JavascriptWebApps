@@ -102,9 +102,9 @@ message displayed by JavaScript`.
 
 [Example solution](https://youtu.be/QouSjlzRpXc?t=375)
 
-## Exercise two - hiding the message
+## Exercise two - removing the message from the page
 
-You'll now test-drive a second button to **hide the message when
+You'll now test-drive a second button to **remove the message from the page when
 the user clicks on it.** For this exercise you'll need to research:
   * How to remove a DOM element with JavaScript.
 
