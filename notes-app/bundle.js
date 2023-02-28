@@ -31,15 +31,26 @@
       var NotesModel2 = require_notesModel();
       var NotesView2 = class {
         constructor(model2) {
-          this.mainContainerEl = document.querySelector("#main-container");
           this.model = model2;
+          this.mainContainerEl = document.querySelector("#main-container");
+          document.querySelector("#add-note-button").addEventListener("click", () => {
+            let newNote = document.querySelector("#note-input").value;
+            this.addNote(newNote);
+            this.displayNotes();
+            document.querySelector("#note-input").value = "";
+          });
         }
         displayNotes() {
+          document.querySelectorAll(".note").forEach((element) => element.remove());
           for (let index = 0; index < this.model.getNotes().length; index++) {
             const divElement = document.createElement("div");
+            divElement.className = "note";
             divElement.innerText = this.model.getNotes()[index];
             this.mainContainerEl.append(divElement);
           }
+        }
+        addNote(newNote) {
+          this.model.addNote(newNote);
         }
       };
       module.exports = NotesView2;

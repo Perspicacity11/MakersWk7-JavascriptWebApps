@@ -15,5 +15,5 @@ class CounterView {
     document.querySelector('#counter').textContent = this.model.getCounter();
   }
 }
-
+ 
 module.exports = CounterView;

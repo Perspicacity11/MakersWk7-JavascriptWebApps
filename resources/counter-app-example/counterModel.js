@@ -1,6 +1,7 @@
 class CounterModel {
   constructor() {
     this.counter = 0;
+    console.log('Verfiying message logged')
   }
 
   getCounter() {

@@ -1,0 +1,8 @@
+"./resources/counter-app-example/node_modules"
+"./notes-app/node_modules"
+"./example-1/node_modules"
+"./example-2/node_modules"
+"./example-3/node_modules"
+"./example-4/node_modules"
+
+node_modules/

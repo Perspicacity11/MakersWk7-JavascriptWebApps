@@ -5,9 +5,6 @@ class NotesModel {
     };
 
     getNotes() {
-        // let notes = this.notesArray.forEach(element => console.log(element))
-        // return notes
-
         return this.notesArray;
     };
 
@@ -20,4 +17,4 @@ class NotesModel {
     }
 }
 
-module.exports = NotesModel; 
+module.exports = NotesModel;  

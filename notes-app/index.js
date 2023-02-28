@@ -10,4 +10,4 @@ model.addNote('Feed the birds')
 const NotesView = require('./notesView')
 
 let view = new NotesView(model)
-view.displayNotes()
+view.displayNotes() 
