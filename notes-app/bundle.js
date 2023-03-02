@@ -20,6 +20,9 @@
         reset() {
           this.notesArray = [];
         }
+        setNotes(response) {
+          this.notesArray.push(response);
+        }
       };
       module.exports = NotesModel2;
     }
@@ -30,12 +33,13 @@
     "notesView.js"(exports, module) {
       var NotesModel2 = require_notesModel();
       var NotesView2 = class {
-        constructor(model2) {
+        constructor(model2, client2) {
           this.model = model2;
+          this.client = client2;
           this.mainContainerEl = document.querySelector("#main-container");
           document.querySelector("#add-note-button").addEventListener("click", () => {
             let newNote = document.querySelector("#note-input").value;
-            this.addNote(newNote);
+            this.client.createNote(newNote);
             this.displayNotes();
             document.querySelector("#note-input").value = "";
           });
@@ -52,19 +56,53 @@
         addNote(newNote) {
           this.model.addNote(newNote);
         }
+        displayNotesFromAPI() {
+          this.client.loadNotes((response) => {
+            this.model.setNotes(response);
+            this.displayNotes();
+          });
+        }
       };
       module.exports = NotesView2;
+    }
+  });
+
+  // notesClient.js
+  var require_notesClient = __commonJS({
+    "notesClient.js"(exports, module) {
+      var NotesClient2 = class {
+        loadNotes(callback) {
+          fetch("http://localhost:3000/notes").then((response) => response.json()).then((response) => {
+            callback(response);
+          });
+        }
+        createNote(data) {
+          fetch("http://localhost:3000/notes", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          }).then((response) => response.json()).then((response) => {
+            console.log("Success:", response);
+          }).catch((error) => {
+            console.error("Error:", error);
+          });
+        }
+      };
+      module.exports = NotesClient2;
     }
   });
 
   // index.js
   console.log("Notes app is running");
   var NotesModel = require_notesModel();
+  var NotesView = require_notesView();
+  var NotesClient = require_notesClient();
+  var client = new NotesClient();
   var model = new NotesModel();
   model.addNote("Walk the dog");
   model.addNote("Cut the grass");
   model.addNote("Feed the birds");
-  var NotesView = require_notesView();
-  var view = new NotesView(model);
+  var view = new NotesView(model, client);
+  view.displayNotesFromAPI();
   view.displayNotes();
 })();

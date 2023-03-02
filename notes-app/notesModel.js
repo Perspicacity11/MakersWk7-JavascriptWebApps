@@ -15,6 +15,10 @@ class NotesModel {
     reset() {
         this.notesArray = []
     }
+
+    setNotes(response) {
+        this.notesArray.push(response)
+    }
 }
 
 module.exports = NotesModel;  

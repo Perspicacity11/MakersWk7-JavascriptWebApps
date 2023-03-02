@@ -1,14 +1,16 @@
 const NotesModel = require('./notesModel')
 
 class NotesView {
-    constructor(model) {
+    constructor(model, client) {
         this.model = model
+        this.client = client
         // this takes the Model (data-storing and handling) class and its methods, so that I
         // can represent them on the page
         this.mainContainerEl = document.querySelector('#main-container');
         document.querySelector("#add-note-button").addEventListener('click', () =>{
             let newNote = document.querySelector('#note-input').value
-            this.addNote(newNote)
+            // this.addNote(newNote)
+            this.client.createNote(newNote)
             this.displayNotes()
             document.querySelector('#note-input').value = ""
         })
@@ -43,6 +45,17 @@ class NotesView {
         this.model.addNote(newNote)
     }
 
+    displayNotesFromAPI() {
+        this.client.loadNotes((response) => {
+        this.model.setNotes(response);
+        this.displayNotes();
+        //the above uses the API call function from the client, and sets the callback function
+        // as that anonymous method, taking the data from the API call, using it as the argument
+        // for the model's setNotes function (which adds it to the main notes array) and then
+        // returns the array contents; the whole thing is one function: loadNotes (with setNotes as
+        //its callback)
+    })
+    }
 }
 
 module.exports = NotesView; 
